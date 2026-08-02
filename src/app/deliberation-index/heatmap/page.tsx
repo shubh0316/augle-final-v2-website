@@ -11,18 +11,16 @@ export const metadata: Metadata = {
 export default function HeatmapPage() {
   return (
     <>
-      <div className="border-b border-border bg-paper">
-        <div className="mx-auto max-w-[1280px] px-5 py-3.5 md:px-10 lg:px-[72px]">
-          <div className="mb-1 font-mono text-[10px] tracking-[0.08em] text-rust uppercase">
-            Augle Deliberation Index
-          </div>
-          <div className="mb-0.5 font-serif text-[22px] text-ink">Confidence grade heatmap</div>
-          <div className="text-xs text-subtle">
-            Session count and grade distribution by domain · Click any cell to explore sessions · Illustrative data
-          </div>
+      <div className="border-b border-border bg-paper px-5 py-3.5 md:px-10 lg:px-[72px]">
+        <div className="mb-1 font-mono text-[10px] tracking-[0.08em] text-rust uppercase">
+          Augle Deliberation Index
+        </div>
+        <div className="mb-0.5 font-serif text-[22px] text-ink">Confidence grade heatmap</div>
+        <div className="text-xs text-subtle">
+          Session count and grade distribution by domain · Click any cell to explore sessions · Illustrative data
         </div>
       </div>
-      <IndexSubnav active="heatmap" />
+      <IndexSubnav active="heatmap" fullWidth />
       <DeliberationHeatmap />
     </>
   );

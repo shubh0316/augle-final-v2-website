@@ -215,7 +215,7 @@ export default function ScoringPage() {
 
       {/* HERO */}
       <div className="border-b border-border">
-        <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-12 px-5 py-16 md:px-10 md:py-20 lg:grid-cols-[1fr_400px] lg:gap-20 lg:px-[72px] lg:py-24">
+        <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-12 px-5 py-16 md:px-10 md:py-20 lg:grid-cols-[1fr_400px] lg:items-start lg:gap-20 lg:px-[72px] lg:py-24">
           <div>
             <div className={eyebrow}>Confidence + dissent scoring</div>
             <h1 className="mb-6 font-serif text-[42px] font-normal leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-[64px]">
@@ -474,7 +474,7 @@ export default function ScoringPage() {
             final output. The resolution condition tells you exactly what evidence would change the
             finding.
           </p>
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start">
             <div className="flex flex-col gap-3">
               {OBJECTIONS.map((o) => (
                 <div key={o.name} className="overflow-hidden rounded-lg border border-border bg-cream">

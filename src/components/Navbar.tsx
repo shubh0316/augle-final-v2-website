@@ -22,7 +22,7 @@ export function Navbar() {
         <Logo variant="dark" className="h-7 w-auto" />
       </Link>
 
-      <div className="hidden items-center gap-9 md:flex">
+      <div className="hidden items-center gap-9 lg:flex">
         {NAV_LINKS.map((link) => (
           <Link
             key={link.href}
@@ -45,7 +45,7 @@ export function Navbar() {
         aria-label="Menu"
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
-        className="flex h-9 w-9 items-center justify-center rounded-md border border-border bg-paper md:hidden"
+        className="flex h-9 w-9 items-center justify-center rounded-md border border-border bg-paper lg:hidden"
       >
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E1C1A" strokeWidth={2}>
           <line x1="4" y1="7" x2="20" y2="7" />
@@ -55,7 +55,7 @@ export function Navbar() {
       </button>
 
       {open && (
-        <div className="fixed inset-x-0 top-16 bottom-0 z-40 flex flex-col gap-1 overflow-y-auto bg-paper p-6 md:hidden">
+        <div className="fixed inset-x-0 top-16 bottom-0 z-40 flex flex-col gap-1 overflow-y-auto bg-paper p-6 lg:hidden">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}

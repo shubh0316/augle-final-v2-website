@@ -111,7 +111,7 @@ export default function IndexOverviewPage() {
 
       {/* HERO */}
       <div className="border-b border-border bg-paper">
-        <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-10 px-5 py-16 md:px-10 md:py-20 lg:grid-cols-[1fr_400px] lg:gap-20 lg:px-[72px] lg:py-20">
+        <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-10 px-5 py-16 md:px-10 md:py-20 lg:grid-cols-[1fr_400px] lg:items-start lg:gap-20 lg:px-[72px] lg:py-20">
           <div>
             <div className={eyebrow}>Augle Deliberation Index</div>
             <h1 className="mb-6 font-serif text-[40px] leading-[1.12] tracking-tight text-ink sm:text-5xl lg:text-[64px]">

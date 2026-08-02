@@ -12,14 +12,20 @@ type ActiveKey = (typeof LINKS)[number]["key"];
 export function IndexSubnav({
   active,
   variant = "light",
+  fullWidth = false,
 }: {
   active: ActiveKey;
   variant?: "dark" | "light";
+  fullWidth?: boolean;
 }) {
   const isDark = variant === "dark";
   return (
-    <div className={isDark ? "border-b border-border-dark bg-ink" : "border-b border-border bg-paper-alt"}>
-      <div className="mx-auto flex h-10 max-w-[1280px] items-stretch overflow-x-auto px-5 md:h-12 md:px-10 lg:px-[72px]">
+    <div className={`flex-shrink-0 ${isDark ? "border-b border-border-dark bg-ink" : "border-b border-border bg-paper-alt"}`}>
+      <div
+        className={`flex h-10 items-stretch overflow-x-auto px-5 md:h-12 md:px-10 lg:px-[72px] ${
+          fullWidth ? "" : "mx-auto max-w-[1280px]"
+        }`}
+      >
 
         {LINKS.map((link) => {
           const isActive = link.key === active;

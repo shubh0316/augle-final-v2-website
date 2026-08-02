@@ -30,6 +30,7 @@ type SessionCard = {
 const AGENT_BY_ID = Object.fromEntries(AGENTS.map((a) => [a.id, a])) as Record<AgentId, Agent>;
 
 const CATEGORIES = ["All", "Life sciences", "Policy", "Economics", "Technology", "Social science"];
+const GRADES = ["All", "Established", "Probable", "Contested", "Gap"];
 
 const BADGE_CLASS: Record<Badge, string> = {
   high: "bg-conf-high-bg text-conf-high-text",
@@ -1004,12 +1005,17 @@ function SidebarContent({ card, onClose }: { card: SessionCard; onClose: () => v
 
 export function OutcomesBrowser() {
   const [filter, setFilter] = useState("All");
+  const [gradeFilter, setGradeFilter] = useState("All");
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
   const [open, setOpen] = useState(false);
 
   const filtered = useMemo(
-    () => CARDS.map((card, idx) => ({ card, idx })).filter(({ card }) => filter === "All" || card.category === filter),
-    [filter],
+    () =>
+      CARDS.map((card, idx) => ({ card, idx })).filter(
+        ({ card }) =>
+          (filter === "All" || card.category === filter) && (gradeFilter === "All" || card.grade === gradeFilter),
+      ),
+    [filter, gradeFilter],
   );
 
   const selectedCard = selectedIdx !== null ? CARDS[selectedIdx] : null;
@@ -1025,26 +1031,50 @@ export function OutcomesBrowser() {
     setFilter(cat);
     setOpen(false);
   }
+  function selectGrade(grade: string) {
+    setGradeFilter(grade);
+    setOpen(false);
+  }
 
   return (
     <div className="flex flex-col md:h-[760px]">
       {/* FILTER BAR */}
-      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border bg-paper px-5 py-2.5 md:px-10">
-        <div className="flex flex-wrap gap-1">
+      <div className="flex flex-wrap items-center gap-3 border-b border-border bg-paper px-5 py-3 md:px-10">
+        <span className="font-mono text-[10px] tracking-[0.06em] text-subtle uppercase">Filter</span>
+        <div className="flex flex-wrap gap-1.5">
           {CATEGORIES.map((cat) => (
             <button
               key={cat}
               type="button"
               onClick={() => selectFilter(cat)}
-              className={`rounded px-3 py-1.5 text-xs transition-colors ${
-                filter === cat ? "bg-ink text-offwhite" : "text-body hover:bg-cream"
+              className={`rounded-[3px] border px-3 py-1 font-mono text-xs whitespace-nowrap transition-colors ${
+                filter === cat
+                  ? "border-ink bg-ink text-offwhite"
+                  : "border-border bg-cream text-body hover:border-rust hover:text-rust"
               }`}
             >
-              {cat}
+              {cat === "All" ? "All domains" : cat}
             </button>
           ))}
         </div>
-        <div className="flex items-center gap-4">
+        <div className="hidden h-6 w-px bg-border sm:block" />
+        <div className="flex flex-wrap gap-1.5">
+          {GRADES.map((grade) => (
+            <button
+              key={grade}
+              type="button"
+              onClick={() => selectGrade(grade)}
+              className={`rounded-[3px] border px-3 py-1 font-mono text-xs whitespace-nowrap transition-colors ${
+                gradeFilter === grade
+                  ? "border-ink bg-ink text-offwhite"
+                  : "border-border bg-cream text-body hover:border-rust hover:text-rust"
+              }`}
+            >
+              {grade === "All" ? "All grades" : grade}
+            </button>
+          ))}
+        </div>
+        <div className="ml-auto flex items-center gap-4">
           <div className="flex items-center gap-3">
             <div className="flex flex-col items-center">
               <span className="font-mono text-[13px] font-medium text-ink">33</span>

@@ -302,7 +302,7 @@ export default function GuardianPage() {
 
       {/* HERO */}
       <div className="border-b border-border">
-        <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-12 px-5 py-16 md:px-10 md:py-20 lg:grid-cols-[1fr_400px] lg:gap-24 lg:px-[72px] lg:py-24">
+        <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-12 px-5 py-16 md:px-10 md:py-20 lg:grid-cols-[1fr_400px] lg:items-start lg:gap-24 lg:px-[72px] lg:py-24">
           <div>
             <div className={eyebrow}>Guardian integrity system</div>
             <h1 className="mb-6 font-serif text-[42px] font-normal leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-[64px]">

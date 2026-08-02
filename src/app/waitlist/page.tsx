@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { btnPrimary, eyebrow, sectionTitle } from "@/lib/styles";
+import { WaitlistForm } from "@/components/WaitlistForm";
+import { eyebrow, sectionTitle } from "@/lib/styles";
 
 export const metadata: Metadata = {
   title: "Join the Waitlist — Augle",
@@ -107,40 +108,7 @@ export default function WaitlistPage() {
             <div className="mb-5 font-serif text-[26px] leading-[1.25] text-ink">
               Reserve your spot on the Augle waitlist
             </div>
-            <form className="flex flex-col">
-              <label htmlFor="waitlist-email" className="mb-1.5 block text-xs text-muted">
-                Email
-              </label>
-              <input
-                id="waitlist-email"
-                name="email"
-                type="email"
-                placeholder="your@email.com"
-                className="mb-3.5 w-full rounded border border-border bg-offwhite px-4 py-3 text-[15px] text-ink placeholder:text-subtle"
-              />
-              <label htmlFor="waitlist-role" className="mb-1.5 block text-xs text-muted">
-                What best describes you?
-              </label>
-              <select
-                id="waitlist-role"
-                name="role"
-                defaultValue=""
-                className="mb-5 w-full rounded border border-border bg-offwhite px-4 py-3 text-[15px] text-ink"
-              >
-                <option value="" disabled>
-                  Select one
-                </option>
-                <option value="academic">Academic / researcher</option>
-                <option value="enterprise">Enterprise / team</option>
-                <option value="law-firm">Law firm</option>
-                <option value="vc">Venture capital / PE</option>
-                <option value="government">Government / policy</option>
-                <option value="other">Other</option>
-              </select>
-              <button type="submit" className={btnPrimary}>
-                Join waitlist →
-              </button>
-            </form>
+            <WaitlistForm />
             <p className="mt-3.5 text-center text-xs leading-[1.6] text-subtle">
               We&apos;ll email you when your account is ready. No spam — just your
               invite.

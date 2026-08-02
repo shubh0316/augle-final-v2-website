@@ -72,10 +72,12 @@ export function QuestionExplorer() {
   const domainCount = DOMAIN_COUNTS.find((d) => d.domain === activeDomain)?.count ?? "";
 
   return (
-    <div className="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-[72px]">
-      <div className="flex flex-col gap-6 py-8 md:flex-row md:items-start md:gap-8 md:py-10">
-        {/* FILTER PANEL */}
-        <div ref={panelRef} className="flex-shrink-0 md:w-60">
+    <div className="flex flex-1 flex-col overflow-visible md:min-h-0 md:flex-row md:overflow-hidden">
+      {/* FILTER PANEL */}
+      <div
+        ref={panelRef}
+        className="flex-shrink-0 overflow-y-visible border-b border-border bg-paper p-5 md:w-60 md:overflow-y-auto md:border-b-0 md:border-r"
+      >
           <div className="mb-6">
             <div className="mb-2.5 font-mono text-[10px] tracking-[0.08em] text-subtle uppercase">Search</div>
             <input
@@ -198,11 +200,11 @@ export function QuestionExplorer() {
         </div>
 
         {/* RESULTS PANEL */}
-        <div className="min-w-0 flex-1">
-          <div className="mb-3 border-b border-border pb-3 font-mono text-xs text-subtle">
+        <div className="min-w-0 flex-1 overflow-visible md:overflow-y-auto">
+          <div className="sticky top-0 z-5 border-b border-border bg-paper px-5 py-3 font-mono text-xs text-subtle md:px-6">
             Showing <span className="font-medium text-ink">{results.length}</span> of 247 sessions · Illustrative data
           </div>
-          <div className="mb-1 hidden grid-cols-[1fr_100px_80px_60px] gap-3 border-b border-border bg-paper-alt px-3 py-2 sm:grid">
+          <div className="sticky top-10 z-4 hidden grid-cols-[1fr_100px_80px_60px] gap-3 border-b border-border bg-paper-alt px-5 py-2 md:px-6 sm:grid">
             <div className="font-mono text-[10px] tracking-[0.06em] text-subtle uppercase">Question</div>
             <div className="text-right font-mono text-[10px] tracking-[0.06em] text-subtle uppercase">Grade</div>
             <div className="cursor-pointer text-right font-mono text-[10px] tracking-[0.06em] text-rust uppercase">Confidence</div>
@@ -219,7 +221,7 @@ export function QuestionExplorer() {
               {results.map((s, i) => (
                 <div
                   key={`${s.domain}-${s.q}-${i}`}
-                  className="grid grid-cols-[1fr_auto] items-center gap-x-3 gap-y-2 border-b border-border px-3 py-3.5 transition-colors hover:bg-paper-alt sm:grid-cols-[1fr_100px_80px_60px]"
+                  className="grid grid-cols-[1fr_auto] items-center gap-x-3 gap-y-2 border-b border-border px-5 py-3.5 transition-colors hover:bg-paper-alt sm:grid-cols-[1fr_100px_80px_60px] md:px-6"
                 >
                   <div className="col-span-2 sm:col-span-1">
                     <div className="mb-1 font-mono text-[10px] tracking-[0.06em] text-rust uppercase">{s.domain}</div>
@@ -238,6 +240,5 @@ export function QuestionExplorer() {
           )}
         </div>
       </div>
-    </div>
   );
 }

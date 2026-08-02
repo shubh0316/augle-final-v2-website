@@ -391,7 +391,7 @@ export default function UseCasesIndexPage() {
 
       {/* HERO */}
       <div className="border-b border-border">
-        <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-12 px-5 py-16 md:px-10 md:py-20 lg:grid-cols-[1fr_400px] lg:gap-20 lg:px-[72px] lg:py-24">
+        <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-12 px-5 py-16 md:px-10 md:py-20 lg:grid-cols-[1fr_400px] lg:items-start lg:gap-20 lg:px-[72px] lg:py-24">
           <div>
             <div className={eyebrow}>Use cases</div>
             <h1 className="mb-6 font-serif text-[42px] font-normal leading-[1.12] tracking-tight text-ink sm:text-5xl lg:text-[64px]">
@@ -437,19 +437,21 @@ export default function UseCasesIndexPage() {
 
       {/* FILTER BAR */}
       <div className="border-b border-border bg-paper">
-        <div className="mx-auto flex flex-wrap items-center gap-2 px-5 py-3.5 md:px-10 lg:px-[72px]">
-          <span className="mr-2 font-mono text-[10px] tracking-[0.08em] text-subtle uppercase">
-            Jump to
-          </span>
-          {VERTICALS.map((v) => (
-            <a
-              key={v.slug}
-              href={`#${v.slug}`}
-              className="inline-block rounded border border-border px-3.5 py-1.5 text-xs text-muted hover:border-rust hover:text-rust"
-            >
-              {v.name.split(" + ")[0]}
-            </a>
-          ))}
+        <div className="overflow-x-auto px-5 py-3.5 md:px-10 lg:px-[72px]">
+          <div className="mx-auto flex w-fit items-center gap-2">
+            <span className="mr-2 flex-shrink-0 whitespace-nowrap font-mono text-[10px] tracking-[0.08em] text-subtle uppercase">
+              Jump to
+            </span>
+            {VERTICALS.map((v) => (
+              <a
+                key={v.slug}
+                href={`#${v.slug}`}
+                className="flex-shrink-0 whitespace-nowrap rounded border border-border px-3.5 py-1.5 text-xs text-muted hover:border-rust hover:text-rust"
+              >
+                {v.name.split(" + ")[0]}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
 

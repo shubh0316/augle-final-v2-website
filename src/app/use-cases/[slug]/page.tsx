@@ -122,7 +122,7 @@ export default async function UseCasePage({
 
       {/* HERO */}
       <div className="border-b border-border">
-        <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-12 px-5 py-16 md:px-10 md:py-20 lg:grid-cols-[1fr_380px] lg:gap-20 lg:px-[72px] lg:py-24">
+        <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-12 px-5 py-16 md:px-10 md:py-20 lg:grid-cols-[1fr_380px] lg:items-start lg:gap-20 lg:px-[72px] lg:py-24">
           <div>
             <div className={eyebrow}>Use cases · {useCase.vertical}</div>
             <h1 className="mb-6 font-serif text-[42px] font-normal leading-[1.12] tracking-tight text-ink sm:text-5xl lg:text-[64px]">

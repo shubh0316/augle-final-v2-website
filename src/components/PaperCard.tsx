@@ -8,9 +8,11 @@ export interface Paper {
   authors: string;
   abstract: string;
   tags: string[];
-  patentTag: string;
+  patentTag: string | null;
   date: string;
-  patentId: string;
+  patentId: string | null;
+  zenodoUrl: string;
+  ssrnUrl: string;
 }
 
 export function PaperCard({ paper }: { paper: Paper }) {
@@ -43,14 +45,16 @@ export function PaperCard({ paper }: { paper: Paper }) {
               {tag}
             </span>
           ))}
-          <span className="rounded-[3px] border border-rust bg-paper px-2.5 py-1 font-mono text-[10px] text-rust">
-            {paper.patentTag}
-          </span>
+          {paper.patentTag && (
+            <span className="rounded-[3px] border border-rust bg-paper px-2.5 py-1 font-mono text-[10px] text-rust">
+              {paper.patentTag}
+            </span>
+          )}
         </div>
 
         <div className="flex flex-wrap gap-2.5">
           <a
-            href="https://zenodo.org"
+            href={paper.zenodoUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 rounded bg-rust px-3.5 py-1.5 font-mono text-[11px] text-offwhite transition-opacity hover:opacity-90"
@@ -58,7 +62,7 @@ export function PaperCard({ paper }: { paper: Paper }) {
             ↗ Zenodo
           </a>
           <a
-            href="https://ssrn.com"
+            href={paper.ssrnUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 rounded border border-border bg-paper-alt px-3.5 py-1.5 font-mono text-[11px] text-body transition-colors hover:border-rust hover:text-rust"
@@ -82,9 +86,9 @@ export function PaperCard({ paper }: { paper: Paper }) {
 
       <div className="flex flex-row items-center gap-3 sm:flex-col sm:items-end sm:gap-2.5 sm:pt-7">
         <span className="font-mono text-[11px] whitespace-nowrap text-subtle">{paper.date}</span>
-        <span className="font-mono text-[10px] tracking-[0.04em] text-faint">
-          {paper.patentId}
-        </span>
+        {paper.patentId && (
+          <span className="font-mono text-[10px] tracking-[0.04em] text-faint">{paper.patentId}</span>
+        )}
       </div>
     </div>
   );

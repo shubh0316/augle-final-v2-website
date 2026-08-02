@@ -161,7 +161,7 @@ export default function OutcomesPage() {
 
       {/* HERO */}
       <div className="border-b border-border">
-        <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-12 px-5 py-16 md:px-10 md:py-20 lg:grid-cols-[1fr_420px] lg:gap-20 lg:px-[72px] lg:py-24">
+        <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-12 px-5 py-16 md:px-10 md:py-20 lg:grid-cols-[1fr_420px] lg:items-start lg:gap-20 lg:px-[72px] lg:py-24">
           <div>
             <div className={eyebrow}>Public deliberations</div>
             <h1 className="mb-6 font-serif text-[42px] font-normal leading-[1.12] tracking-tight text-ink sm:text-5xl lg:text-[56px]">
@@ -216,13 +216,13 @@ export default function OutcomesPage() {
 
       {/* FILTER BAR (illustrative — non-interactive on this page; see the interactive browser) */}
       <div className="border-b border-border bg-paper">
-        <div className="mx-auto flex max-w-[1280px] flex-wrap items-center gap-3 px-5 py-3 md:px-10 lg:px-[72px]">
-          <span className="font-mono text-[10px] tracking-[0.06em] text-subtle uppercase">Filter</span>
-          <div className="flex flex-wrap gap-1.5">
+        <div className="mx-auto flex max-w-[1280px] items-center gap-3 overflow-x-auto px-5 py-3 md:px-10 lg:px-[72px]">
+          <span className="flex-shrink-0 font-mono text-[10px] tracking-[0.06em] text-subtle uppercase">Filter</span>
+          <div className="flex flex-shrink-0 gap-1.5">
             {DOMAIN_FILTERS.map((f, i) => (
               <span
                 key={f}
-                className={`rounded-[3px] border border-border px-3 py-1 font-mono text-xs whitespace-nowrap ${
+                className={`flex-shrink-0 rounded-[3px] border border-border px-3 py-1 font-mono text-xs whitespace-nowrap ${
                   i === 0 ? "bg-ink text-offwhite border-ink" : "bg-cream text-body"
                 }`}
               >
@@ -230,12 +230,12 @@ export default function OutcomesPage() {
               </span>
             ))}
           </div>
-          <div className="hidden h-6 w-px bg-border sm:block" />
-          <div className="flex flex-wrap gap-1.5">
+          <div className="hidden h-6 w-px flex-shrink-0 bg-border sm:block" />
+          <div className="flex flex-shrink-0 gap-1.5">
             {GRADE_FILTERS.map((f, i) => (
               <span
                 key={f}
-                className={`rounded-[3px] border border-border px-3 py-1 font-mono text-xs whitespace-nowrap ${
+                className={`flex-shrink-0 rounded-[3px] border border-border px-3 py-1 font-mono text-xs whitespace-nowrap ${
                   i === 0 ? "bg-ink text-offwhite border-ink" : "bg-cream text-body"
                 }`}
               >

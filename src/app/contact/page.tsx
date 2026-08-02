@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { btnPrimary, eyebrow, sectionTitle } from "@/lib/styles";
+import { ContactForm } from "@/components/ContactForm";
+import { eyebrow, sectionTitle } from "@/lib/styles";
 
 export const metadata: Metadata = {
   title: "Contact — Augle",
@@ -129,99 +130,7 @@ export default function ContactPage() {
               directly.
             </p>
           </div>
-          <form className="flex flex-col">
-            <div className="mb-4">
-              <label
-                htmlFor="contact-name"
-                className="mb-1.5 block font-mono text-[10px] tracking-[0.08em] text-muted uppercase"
-              >
-                Your name
-              </label>
-              <input
-                id="contact-name"
-                name="name"
-                type="text"
-                placeholder="Full name"
-                className="w-full rounded-[5px] border border-border bg-paper-alt px-3.5 py-3 text-[15px] text-ink outline-none transition-colors focus:border-rust"
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                htmlFor="contact-email"
-                className="mb-1.5 block font-mono text-[10px] tracking-[0.08em] text-muted uppercase"
-              >
-                Email address
-              </label>
-              <input
-                id="contact-email"
-                name="email"
-                type="email"
-                placeholder="you@organisation.com"
-                className="w-full rounded-[5px] border border-border bg-paper-alt px-3.5 py-3 text-[15px] text-ink outline-none transition-colors focus:border-rust"
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                htmlFor="contact-org"
-                className="mb-1.5 block font-mono text-[10px] tracking-[0.08em] text-muted uppercase"
-              >
-                Organisation
-              </label>
-              <input
-                id="contact-org"
-                name="organisation"
-                type="text"
-                placeholder="Optional"
-                className="w-full rounded-[5px] border border-border bg-paper-alt px-3.5 py-3 text-[15px] text-ink outline-none transition-colors focus:border-rust"
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                htmlFor="contact-subject"
-                className="mb-1.5 block font-mono text-[10px] tracking-[0.08em] text-muted uppercase"
-              >
-                Subject
-              </label>
-              <select
-                id="contact-subject"
-                name="subject"
-                defaultValue=""
-                className="w-full appearance-none rounded-[5px] border border-border bg-paper-alt bg-[right_14px_center] bg-no-repeat px-3.5 py-3 text-[15px] text-ink outline-none transition-colors focus:border-rust"
-              >
-                <option value="">Select a topic</option>
-                <option>Product question</option>
-                <option>Waitlist inquiry</option>
-                <option>Enterprise / team plan</option>
-                <option>Research collaboration</option>
-                <option>Press / media</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div className="mb-4">
-              <label
-                htmlFor="contact-message"
-                className="mb-1.5 block font-mono text-[10px] tracking-[0.08em] text-muted uppercase"
-              >
-                Message
-              </label>
-              <textarea
-                id="contact-message"
-                name="message"
-                placeholder="What's on your mind?"
-                className="h-[120px] w-full resize-y rounded-[5px] border border-border bg-paper-alt px-3.5 py-3 text-[15px] leading-[1.6] text-ink outline-none transition-colors focus:border-rust"
-              />
-            </div>
-            <button type="submit" className={`${btnPrimary} mt-1 w-full text-center`}>
-              Send message
-            </button>
-            <p className="mt-3 text-center text-[13px] leading-[1.6] text-subtle">
-              By submitting this form you agree to our{" "}
-              <Link href="/privacy" className="text-rust">
-                Privacy Policy
-              </Link>
-              .
-            </p>
-          </form>
+          <ContactForm />
         </div>
       </div>
 

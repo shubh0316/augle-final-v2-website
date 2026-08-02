@@ -93,7 +93,7 @@ export function DeliberationHeatmap() {
   const selectedSessions: HeatmapSession[] = selectedDomain && selected ? selectedDomain.sessions[selected.grade] : [];
 
   return (
-    <div className="mx-auto max-w-[1280px] px-5 py-8 md:px-10 md:py-10 lg:px-[72px]">
+    <div className="px-5 py-8 md:px-10 md:py-10 lg:px-[72px]">
       <div className="flex flex-col gap-6 md:flex-row md:items-start">
         {/* HEATMAP SIDE */}
         <div className="min-w-0 flex-1">

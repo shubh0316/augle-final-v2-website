@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans, Libre_Baskerville, IBM_Plex_Mono } from "next/font/google";
+import { Toaster } from "sonner";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
+import { FooterGate } from "@/components/FooterGate";
 
 const plexSans = IBM_Plex_Sans({
   variable: "--font-plex-sans",
@@ -36,10 +37,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${plexSans.variable} ${baskerville.variable} ${plexMono.variable}`}>
-      <body className="bg-cream font-sans text-ink">
+      <body className="flex min-h-screen flex-col bg-cream font-sans text-ink">
         <Navbar />
-        {children}
-        <Footer />
+        <div className="flex flex-1 flex-col">{children}</div>
+        <FooterGate />
+        <Toaster
+          position="top-center"
+          toastOptions={{
+            style: {
+              background: "var(--color-paper)",
+              color: "var(--color-ink)",
+              border: "1px solid var(--color-border)",
+              fontFamily: "var(--font-sans)",
+              fontSize: "14px",
+            },
+          }}
+        />
       </body>
     </html>
   );

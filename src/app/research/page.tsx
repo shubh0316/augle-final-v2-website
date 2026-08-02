@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { PaperCard, type Paper } from "@/components/PaperCard";
 import { btnPrimary, eyebrow, sectionTitle } from "@/lib/styles";
+import { getZenodoPapers } from "@/lib/zenodo";
 
 export const metadata: Metadata = {
   title: "Research + Whitepapers — Augle",
@@ -10,21 +11,8 @@ export const metadata: Metadata = {
     "Augle's published research — seven peer-reviewed papers on augmented deliberation, multi-agent ensemble design, corpus infrastructure, and calibration scoring. Published on Zenodo and SSRN.",
 };
 
-const HERO_STATS = [
-  { num: "7", label: "Published papers" },
-  { num: "7", label: "Provisional patents" },
-  { num: "2", label: "Repositories" },
-];
-
-const PANEL_ROWS = [
-  { label: "Authors", value: "Cory Kelly · Shubhanker Saxena" },
-  { label: "Repositories", value: "Zenodo · SSRN", accent: true },
-  { label: "arXiv", value: "Pending endorsement" },
-  { label: "Filed", value: "June 2026 · 7 provisionals" },
-  { label: "License", value: "CC BY 4.0" },
-];
-
-const PAPERS: Paper[] = [
+// Used only if the live Zenodo fetch fails — last-known-good snapshot so the page never breaks.
+const FALLBACK_PAPERS: Paper[] = [
   {
     num: "Paper 01 · AUGLE-001P · June 4, 2026",
     title:
@@ -36,6 +24,8 @@ const PAPERS: Paper[] = [
     patentTag: "Provisional: AUGLE-001P",
     date: "June 4, 2026",
     patentId: "64/082,269",
+    zenodoUrl: "https://zenodo.org",
+    ssrnUrl: "https://ssrn.com",
   },
   {
     num: "Paper 02 · AUGLE-002P · June 11, 2026",
@@ -48,6 +38,8 @@ const PAPERS: Paper[] = [
     patentTag: "Provisional: AUGLE-002P",
     date: "June 11, 2026",
     patentId: "64/088,094",
+    zenodoUrl: "https://zenodo.org",
+    ssrnUrl: "https://ssrn.com",
   },
   {
     num: "Paper 03 · AUGLE-003P · June 13, 2026",
@@ -60,6 +52,8 @@ const PAPERS: Paper[] = [
     patentTag: "Provisional: AUGLE-003P",
     date: "June 13, 2026",
     patentId: "64/090,101",
+    zenodoUrl: "https://zenodo.org",
+    ssrnUrl: "https://ssrn.com",
   },
   {
     num: "Paper 04 · AUGLE-004P · June 13, 2026",
@@ -72,6 +66,8 @@ const PAPERS: Paper[] = [
     patentTag: "Provisional: AUGLE-004P",
     date: "June 13, 2026",
     patentId: "64/090,105",
+    zenodoUrl: "https://zenodo.org",
+    ssrnUrl: "https://ssrn.com",
   },
   {
     num: "Paper 05 · AUGLE-005P · June 19, 2026",
@@ -84,6 +80,8 @@ const PAPERS: Paper[] = [
     patentTag: "Provisional: AUGLE-005P",
     date: "June 19, 2026",
     patentId: "64/094,556",
+    zenodoUrl: "https://zenodo.org",
+    ssrnUrl: "https://ssrn.com",
   },
   {
     num: "Paper 06 · AUGLE-006P · June 19, 2026",
@@ -96,6 +94,8 @@ const PAPERS: Paper[] = [
     patentTag: "Provisional: AUGLE-006P",
     date: "June 19, 2026",
     patentId: "64/094,568",
+    zenodoUrl: "https://zenodo.org",
+    ssrnUrl: "https://ssrn.com",
   },
   {
     num: "Paper 07 · AUGLE-007P · June 19, 2026",
@@ -108,6 +108,8 @@ const PAPERS: Paper[] = [
     patentTag: "Provisional: AUGLE-007P",
     date: "June 19, 2026",
     patentId: "64/094,580",
+    zenodoUrl: "https://zenodo.org",
+    ssrnUrl: "https://ssrn.com",
   },
 ];
 
@@ -126,7 +128,24 @@ const REPO_LINKS = [
   },
 ];
 
-export default function ResearchPage() {
+export default async function ResearchPage() {
+  const papers = await getZenodoPapers().catch(() => FALLBACK_PAPERS);
+  const provisionalCount = papers.filter((p) => p.patentId).length;
+
+  const heroStats = [
+    { num: String(papers.length), label: "Published papers" },
+    { num: String(provisionalCount), label: "Provisional patents" },
+    { num: "2", label: "Repositories" },
+  ];
+
+  const panelRows = [
+    { label: "Authors", value: "Cory Kelly · Shubhanker Saxena" },
+    { label: "Repositories", value: "Zenodo · SSRN", accent: true },
+    { label: "arXiv", value: "Pending endorsement" },
+    { label: "Filed", value: `2026 · ${provisionalCount} provisionals` },
+    { label: "License", value: "CC BY 4.0" },
+  ];
+
   return (
     <>
       <Breadcrumb
@@ -139,7 +158,7 @@ export default function ResearchPage() {
 
       {/* HERO */}
       <div className="border-b border-border">
-        <div className="mx-auto flex max-w-[1280px] flex-col gap-10 px-5 py-16 md:px-10 md:py-20 lg:flex-row lg:gap-16 lg:px-[72px]">
+        <div className="mx-auto flex max-w-[1280px] flex-col gap-10 px-5 py-16 md:px-10 md:py-20 lg:flex-row lg:items-start lg:gap-16 lg:px-[72px]">
           <div className="min-w-0 flex-1">
             <div className={eyebrow}>Research + whitepapers</div>
             <h1 className="mb-6 font-serif text-4xl leading-[1.12] font-normal tracking-tight text-ink lg:text-[56px]">
@@ -155,7 +174,7 @@ export default function ResearchPage() {
               Shubhanker Saxena.
             </p>
             <div className="flex flex-wrap gap-8">
-              {HERO_STATS.map((stat) => (
+              {heroStats.map((stat) => (
                 <div key={stat.label} className="flex flex-col gap-1">
                   <div className="font-serif text-4xl leading-none text-rust">{stat.num}</div>
                   <div className="font-mono text-[11px] tracking-[0.06em] text-subtle uppercase">
@@ -171,11 +190,11 @@ export default function ResearchPage() {
                 Publication info
               </span>
             </div>
-            {PANEL_ROWS.map((row, i) => (
+            {panelRows.map((row, i) => (
               <div
                 key={row.label}
                 className={`flex flex-wrap items-baseline justify-between gap-3 px-5 py-3 ${
-                  i < PANEL_ROWS.length - 1 ? "border-b border-border" : ""
+                  i < panelRows.length - 1 ? "border-b border-border" : ""
                 }`}
               >
                 <span className="flex-shrink-0 font-mono text-[10px] tracking-[0.05em] text-subtle uppercase">
@@ -209,8 +228,8 @@ export default function ResearchPage() {
             design to corpus infrastructure to calibration methodology.
           </p>
           <div className="flex flex-col gap-px overflow-hidden rounded-lg border border-border bg-border">
-            {PAPERS.map((paper) => (
-              <PaperCard key={paper.patentId} paper={paper} />
+            {papers.map((paper) => (
+              <PaperCard key={paper.zenodoUrl} paper={paper} />
             ))}
           </div>
         </div>
