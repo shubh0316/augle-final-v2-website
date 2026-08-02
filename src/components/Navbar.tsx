@@ -8,7 +8,7 @@ const NAV_LINKS = [
   { href: "/how-it-works", label: "How it works" },
   { href: "/solutions", label: "Solutions" },
   { href: "/outcomes", label: "Outcomes" },
-  { href: "/index", label: "Index" },
+  { href: "/deliberation-index", label: "Index" },
   { href: "/pricing", label: "Pricing" },
   { href: "/about", label: "Company" },
 ];
