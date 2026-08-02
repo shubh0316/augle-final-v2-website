@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { toast } from "sonner";
-import { btnPrimary } from "@/lib/styles";
 
 export function WaitlistForm() {
   const [submitting, setSubmitting] = useState(false);
@@ -71,11 +70,11 @@ export function WaitlistForm() {
       <button
         type="submit"
         disabled={submitting}
-        className={`${btnPrimary} flex items-center justify-center gap-2 disabled:cursor-not-allowed disabled:opacity-60`}
+        className="flex items-center justify-center gap-2 rounded bg-rust px-7 py-3.5 text-[15px] font-medium text-offwhite transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
       >
         {submitting ? (
           <>
-            <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-offwhite/30 border-t-offwhite" />
+            <span className="h-3.5 w-3.5 flex-shrink-0 animate-spin rounded-full border-2 border-offwhite/30 border-t-offwhite" />
             Joining…
           </>
         ) : (

@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { toast } from "sonner";
-import { btnPrimary } from "@/lib/styles";
 
 export function ContactForm() {
   const [submitting, setSubmitting] = useState(false);
@@ -127,11 +126,11 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={submitting}
-        className={`${btnPrimary} mt-1 flex w-full items-center justify-center gap-2 text-center disabled:cursor-not-allowed disabled:opacity-60`}
+        className="mt-1 flex w-full items-center justify-center gap-2 rounded bg-rust px-7 py-3.5 text-center text-[15px] font-medium text-offwhite transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
       >
         {submitting ? (
           <>
-            <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-offwhite/30 border-t-offwhite" />
+            <span className="h-3.5 w-3.5 flex-shrink-0 animate-spin rounded-full border-2 border-offwhite/30 border-t-offwhite" />
             Sending…
           </>
         ) : (

@@ -25,7 +25,15 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Enter a message." }, { status: 400 });
   }
 
-  await saveSubmission("contact", { name, email, organisation, subject, message });
+  try {
+    await saveSubmission("contact", { name, email, organisation, subject, message });
+  } catch (err) {
+    console.error("[api/contact] failed to save submission", err);
+    return NextResponse.json(
+      { error: "Something went wrong saving your submission. Please try again." },
+      { status: 500 },
+    );
+  }
 
   return NextResponse.json({ ok: true });
 }

@@ -20,7 +20,15 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Select what best describes you." }, { status: 400 });
   }
 
-  await saveSubmission("waitlist", { email, role });
+  try {
+    await saveSubmission("waitlist", { email, role });
+  } catch (err) {
+    console.error("[api/waitlist] failed to save submission", err);
+    return NextResponse.json(
+      { error: "Something went wrong saving your submission. Please try again." },
+      { status: 500 },
+    );
+  }
 
   return NextResponse.json({ ok: true });
 }
