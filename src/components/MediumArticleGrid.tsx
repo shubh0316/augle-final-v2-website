@@ -23,14 +23,26 @@ export function MediumArticleGrid() {
                 {article.excerpt}
               </p>
               <div className="mt-auto flex items-center gap-2.5">
-                <a href="#" data-pending-link="true">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={continueReadingIcon}
-                    alt="Continue reading on Medium"
-                    className="block h-[22px] w-auto"
-                  />
-                </a>
+                {article.url ? (
+                  <a href={article.url} target="_blank" rel="noopener noreferrer">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={continueReadingIcon}
+                      alt="Continue reading on Medium"
+                      className="block h-[22px] w-auto"
+                    />
+                  </a>
+                ) : (
+                  // pending: no Medium URL yet for this article
+                  <a href="#" data-pending-link="true">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={continueReadingIcon}
+                      alt="Continue reading on Medium"
+                      className="block h-[22px] w-auto"
+                    />
+                  </a>
+                )}
               </div>
             </div>
           </div>
