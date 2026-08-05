@@ -24,6 +24,13 @@ const PATENT_BY_CODE: Record<string, string> = {
   "AUGLE-007P": "64/094,580",
 };
 
+// Paper 01's Zenodo record has no "version" metadata field set, so the
+// AUGLE-00XP code can't be extracted from it like the other six papers.
+// Mapped here by DOI as a fallback until the record's metadata is fixed.
+const CODE_BY_DOI: Record<string, string> = {
+  "10.5281/zenodo.21443526": "AUGLE-001P", // Augle: A Seven-Agent Deliberative Ensemble...
+};
+
 // SSRN has no public API (unlike Zenodo) — abstract IDs are mapped here by hand,
 // keyed by the paper's Zenodo DOI. Unmapped papers fall back to the SSRN homepage.
 const SSRN_BY_DOI: Record<string, string> = {
@@ -97,7 +104,7 @@ export async function getZenodoPapers(): Promise<ZenodoPaper[]> {
     .slice()
     .sort((a, b) => a.metadata.publication_date.localeCompare(b.metadata.publication_date))
     .map((hit, i) => {
-      const code = hit.metadata.version?.match(/AUGLE-\d+P/)?.[0] ?? null;
+      const code = hit.metadata.version?.match(/AUGLE-\d+P/)?.[0] ?? CODE_BY_DOI[hit.doi] ?? null;
       const date = new Date(hit.metadata.publication_date).toLocaleDateString("en-US", {
         year: "numeric",
         month: "long",
