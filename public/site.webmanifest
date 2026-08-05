@@ -1,0 +1,11 @@
+{
+  "name": "Augle",
+  "short_name": "Augle",
+  "icons": [
+    { "src": "/icon-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#c2603d",
+  "background_color": "#e8e4d9",
+  "display": "standalone"
+}
