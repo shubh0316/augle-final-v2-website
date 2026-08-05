@@ -5,9 +5,9 @@ import { CtaBanner } from "@/components/CtaBanner";
 import { eyebrow, sectionTitle } from "@/lib/styles";
 
 export const metadata: Metadata = {
-  title: "Outcomes — Augle",
+  title: "Augle Outcomes | Public Record of AI Deliberation Sessions & Accuracy",
   description:
-    "Every Augle deliberation published in full — the question, finding, confidence grade, agent contributions, and dissent. Example sessions; live sessions publish as they run.",
+    "Every Augle session is published in full — confidence grade, agent scores, Guardian audit trail, and Brier score against market consensus. Browse resolved sessions by domain.",
 };
 
 type Grade = "Established" | "Probable" | "Contested" | "Gap";

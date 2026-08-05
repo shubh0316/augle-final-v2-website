@@ -6,9 +6,9 @@ import { AGENTS } from "@/data/agents";
 import { eyebrow, sectionTitle } from "@/lib/styles";
 
 export const metadata: Metadata = {
-  title: "Phase Architecture — Augle",
+  title: "Augle's 3-Phase AI Deliberation Process Explained",
   description:
-    "Augle routes every research question through three deliberation phases — Exploration, Deliberation, and Synthesis. Each phase produces structured outputs that constrain the next. Learn how the architecture works.",
+    "Exploration, Deliberation, Synthesis — how Augle structures every research session into three constrained phases that build toward a calibrated finding.",
 };
 
 function agent(id: string) {

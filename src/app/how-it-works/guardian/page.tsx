@@ -5,9 +5,9 @@ import { CtaBanner } from "@/components/CtaBanner";
 import { eyebrow, sectionTitle } from "@/lib/styles";
 
 export const metadata: Metadata = {
-  title: "Guardian Integrity System — Augle",
+  title: "Guardian: Augle's AI Fact-Checking & Source Verification Layer",
   description:
-    "The Guardian is Augle's independent integrity layer — operating at every phase boundary with halt authority, hidden model identity, and a real-time Source Verification Service that authenticates every citation before it influences a finding.",
+    "The Guardian is Augle's independent integrity system — verifying every citation in real time, with halt authority at every phase boundary before a finding can proceed.",
 };
 
 const FACTS = [

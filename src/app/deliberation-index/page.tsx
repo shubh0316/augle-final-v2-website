@@ -7,9 +7,9 @@ import { CtaBanner } from "@/components/CtaBanner";
 import { eyebrow, sectionTitle } from "@/lib/styles";
 
 export const metadata: Metadata = {
-  title: "Deliberation Index — Augle",
+  title: "The Augle Index | Where AI Models Agree and Disagree on Key Questions",
   description:
-    "The Augle Deliberation Index tracks consensus rates, dissent levels, and confidence grade distributions across domains in real time. Where does AI reach consensus — and where does it break down?",
+    "Real-time tracking of consensus rates, dissent levels, and confidence grade distributions across economics, technology, policy, and more.",
 };
 
 const TICKER_ITEMS: { domain: string; q: string; grade: "Probable" | "Contested" }[] = [

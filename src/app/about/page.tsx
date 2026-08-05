@@ -5,9 +5,9 @@ import { CtaBanner } from "@/components/CtaBanner";
 import { btnPrimary, eyebrow, sectionTitle } from "@/lib/styles";
 
 export const metadata: Metadata = {
-  title: "About — Augle",
+  title: "About Augle | AI-Powered Deliberation & Research Infrastructure",
   description:
-    "Augle, Inc. is a Delaware C-Corporation building the world's first structured multi-agent deliberation platform. Founded by Cory Kelly and Shubhanker Saxena in 2026.",
+    "Augle builds structured multi-agent AI deliberation infrastructure — seven specialized agents, evidence-anchored findings, and calibrated confidence grades for high-stakes research.",
 };
 
 const BUILT_ITEMS = [

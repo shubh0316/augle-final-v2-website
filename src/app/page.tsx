@@ -102,18 +102,16 @@ export default function HomePage() {
       <div className="border-b border-border">
         <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-12 px-5 py-16 md:px-10 md:py-20 lg:grid-cols-[1fr_420px] lg:items-start lg:gap-24 lg:px-[72px] lg:py-28">
           <div>
-            <div className={eyebrow}>Augmented deliberation</div>
-            <h1 className="mb-7 font-serif text-[42px] font-normal leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-[64px]">
-              The questions
+            <div className={eyebrow}>Augle</div>
+            <h1 className="mb-7 font-serif text-[42px] font-normal leading-[1.12] tracking-tight text-ink sm:text-5xl lg:text-[64px]">
+              Augmented deliberation.
               <br />
-              that matter don&apos;t
-              <br />
-              have <em className="text-rust not-italic italic">clean answers.</em>
+              <em className="text-rust not-italic italic">Engineered for the questions that matter.</em>
             </h1>
             <p className="mb-10 max-w-xl text-lg leading-[1.8] text-body">
               Augle&apos;s multi-agent ensemble maps what&apos;s settled, what&apos;s contested,
               and what&apos;s unknown — producing evidence-anchored findings with calibrated
-              confidence grades before the stakes are live.
+              confidence grades grounded in verifiable data.
             </p>
             <div className="flex flex-wrap items-center gap-6">
               <Link href="/waitlist" className={btnPrimary}>
@@ -122,6 +120,13 @@ export default function HomePage() {
               <Link href="/how-it-works" className={btnSecondary}>
                 See how it works →
               </Link>
+            </div>
+            <div className="mt-7 flex flex-wrap items-center gap-2.5 font-mono text-xs text-muted">
+              <span>Full audit trail</span>
+              <span className="text-lg leading-none text-muted">·</span>
+              <span>Every source verified</span>
+              <span className="text-lg leading-none text-muted">·</span>
+              <span>Dissent preserved, not resolved away</span>
             </div>
           </div>
           <WaffleWidget />

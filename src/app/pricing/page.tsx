@@ -3,9 +3,9 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { btnWhite, eyebrow, sectionTitle } from "@/lib/styles";
 
 export const metadata: Metadata = {
-  title: "Pricing — Augle",
+  title: "Augle Pricing | Credit-Based AI Research Sessions",
   description:
-    "Augle uses a credit-based model — no subscriptions. Buy credits, run sessions at three depth tiers. Credits never expire. One free Standard session for every new account.",
+    "No subscriptions. Buy credits, run sessions at three depth tiers, credits never expire. One free Standard session on signup.",
 };
 
 const PRINCIPLES = [

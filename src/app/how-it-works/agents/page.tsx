@@ -7,9 +7,9 @@ import { AgentIcon } from "@/components/AgentIcon";
 import { eyebrow } from "@/lib/styles";
 
 export const metadata: Metadata = {
-  title: "Agents + Roles — Augle",
+  title: "The 7 AI Agents Behind Augle | Roles, Models & Temperature Settings",
   description:
-    "Full specifications for every Augle agent — role, decoding behavior, permitted actions, forbidden actions, and dispatch order logic. Specialised roles. Independent models. One structured deliberation.",
+    "Full specs for Augle's seven agents — Guardian, Cartographer, Methodologist, Contrarian, Synthesizer, Pragmatist, Topic Architect — model assignment and permitted actions for each.",
 };
 
 function agent(id: string) {

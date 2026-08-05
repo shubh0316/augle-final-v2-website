@@ -76,7 +76,7 @@ export function QuestionExplorer() {
       {/* FILTER PANEL */}
       <div
         ref={panelRef}
-        className="flex-shrink-0 overflow-y-visible border-b border-border bg-paper p-5 md:w-60 md:overflow-y-auto md:border-b-0 md:border-r"
+        className="flex-shrink-0 overflow-y-visible border-b border-border bg-paper px-5 py-4 md:w-60 md:overflow-y-auto md:border-b-0 md:border-r md:p-5"
       >
           <div className="mb-6">
             <div className="mb-2.5 font-mono text-[10px] tracking-[0.08em] text-subtle uppercase">Search</div>
@@ -204,7 +204,7 @@ export function QuestionExplorer() {
           <div className="sticky top-0 z-5 border-b border-border bg-paper px-5 py-3 font-mono text-xs text-subtle md:px-6">
             Showing <span className="font-medium text-ink">{results.length}</span> of 247 sessions · Illustrative data
           </div>
-          <div className="sticky top-10 z-4 hidden grid-cols-[1fr_100px_80px_60px] gap-3 border-b border-border bg-paper-alt px-5 py-2 md:px-6 sm:grid">
+          <div className="sticky top-10 z-4 hidden grid-cols-[1fr_100px_80px_60px] gap-3 border-b border-border bg-paper-alt px-5 py-2 md:grid md:px-6">
             <div className="font-mono text-[10px] tracking-[0.06em] text-subtle uppercase">Question</div>
             <div className="text-right font-mono text-[10px] tracking-[0.06em] text-subtle uppercase">Grade</div>
             <div className="cursor-pointer text-right font-mono text-[10px] tracking-[0.06em] text-rust uppercase">Confidence</div>
@@ -221,19 +221,25 @@ export function QuestionExplorer() {
               {results.map((s, i) => (
                 <div
                   key={`${s.domain}-${s.q}-${i}`}
-                  className="grid grid-cols-[1fr_auto] items-center gap-x-3 gap-y-2 border-b border-border px-5 py-3.5 transition-colors hover:bg-paper-alt sm:grid-cols-[1fr_100px_80px_60px] md:px-6"
+                  className="grid grid-cols-1 gap-2.5 border-b border-border px-5 py-4 transition-colors hover:bg-paper-alt md:grid-cols-[1fr_100px_80px_60px] md:items-center md:gap-x-3 md:gap-y-0 md:px-6 md:py-3.5"
                 >
-                  <div className="col-span-2 sm:col-span-1">
+                  <div>
                     <div className="mb-1 font-mono text-[10px] tracking-[0.06em] text-rust uppercase">{s.domain}</div>
                     <div className="font-serif text-[13px] leading-snug text-ink">{s.q}</div>
                   </div>
-                  <span
-                    className={`justify-self-start rounded px-2 py-0.5 text-center font-mono text-[11px] whitespace-nowrap sm:justify-self-end ${GRADE_BADGE_CLASS[s.grade]}`}
-                  >
-                    {s.grade}
-                  </span>
-                  <span className={`text-right font-mono text-sm font-medium ${EXPLORER_CONF_CLASS[s.grade]}`}>{s.conf}%</span>
-                  <span className="text-right font-mono text-[10px] text-subtle">{s.time}</span>
+                  <div className="flex items-center justify-between md:contents">
+                    <div className="flex items-center gap-3 md:contents">
+                      <span
+                        className={`justify-self-start rounded px-2 py-0.5 text-center font-mono text-[11px] whitespace-nowrap md:justify-self-end ${GRADE_BADGE_CLASS[s.grade]}`}
+                      >
+                        {s.grade}
+                      </span>
+                      <span className={`font-mono text-[13px] font-medium md:text-right md:text-sm ${EXPLORER_CONF_CLASS[s.grade]}`}>
+                        {s.conf}%
+                      </span>
+                    </div>
+                    <span className="font-mono text-[10px] text-subtle md:text-right">{s.time}</span>
+                  </div>
                 </div>
               ))}
             </div>

@@ -75,9 +75,9 @@ export const SOLUTIONS: Solution[] = [
   {
     slug: "enterprise",
     navLabel: "Enterprise",
-    metaTitle: "Enterprise — Solutions — Augle",
+    metaTitle: "AI Vendor Claim & Competitive Intelligence Review | Augle",
     metaDescription:
-      "Augle for enterprise teams — strategic decision research, vendor claim validation, and competitive intelligence stress-testing. Multi-agent deliberation for the questions that drive material business decisions.",
+      "Augle stress-tests strategic research, vendor claims, and competitive intelligence before high-stakes business decisions become irreversible.",
     eyebrow: "Solutions · Enterprise",
     heroTitle: {
       lines: ["The decision is made.", "The evidence behind it"],
@@ -278,9 +278,9 @@ export const SOLUTIONS: Solution[] = [
   {
     slug: "healthcare",
     navLabel: "Healthcare + life sciences",
-    metaTitle: "Healthcare + Life Sciences — Solutions — Augle",
+    metaTitle: "AI Clinical Evidence Review Tool for Healthcare Teams | Augle",
     metaDescription:
-      "Augle for healthcare and life sciences — clinical evidence review, drug interaction analysis, and trial design stress-testing. Multi-agent deliberation with clinical integrity mode active.",
+      "Augle stress-tests clinical evidence, trial design, and treatment protocol claims — Guardian operates in Clinical integrity mode with retraction database checks.",
     eyebrow: "Solutions · Healthcare + life sciences",
     heroTitle: {
       lines: ["Clinical evidence", "that doesn’t survive"],
@@ -483,9 +483,9 @@ export const SOLUTIONS: Solution[] = [
   {
     slug: "universities",
     navLabel: "Universities + academia",
-    metaTitle: "Universities + Academia — Solutions — Augle",
+    metaTitle: "AI Research Tool for Universities | Dissertation & Grant Review — Augle",
     metaDescription:
-      "Augle for universities and academic research — dissertation defence preparation, grant application review, and peer review stress-testing. Multi-agent deliberation in academic integrity mode.",
+      "Augle helps PhD candidates and faculty stress-test dissertation claims, review grant applications, and pressure-test peer review — with full academic integrity mode.",
     eyebrow: "Solutions · Universities + academia",
     heroTitle: {
       lines: ["The committee", "already knows"],
@@ -701,9 +701,9 @@ export const SOLUTIONS: Solution[] = [
   {
     slug: "financial-services",
     navLabel: "Financial services",
-    metaTitle: "Financial Services — Solutions — Augle",
+    metaTitle: "AI Investment Research & Compliance Review Tool | Augle",
     metaDescription:
-      "Augle for financial services — investment research stress-testing, regulatory compliance review, and risk model validation. Multi-agent deliberation with financial integrity mode active.",
+      "Augle stress-tests investment research, compliance positions, and risk model assumptions with Guardian's Financial integrity mode.",
     eyebrow: "Solutions · Financial services",
     heroTitle: {
       lines: ["The analysis looks", "sound. The regulator"],
@@ -905,9 +905,9 @@ export const SOLUTIONS: Solution[] = [
   {
     slug: "government",
     navLabel: "Government + public sector",
-    metaTitle: "Government + Public Sector — Solutions — Augle",
+    metaTitle: "AI Policy Evidence & Procurement Review Tool | Augle",
     metaDescription:
-      "Augle for government and public sector — policy evidence review, procurement analysis, and public consultation stress-testing. Multi-agent deliberation for decisions that affect the public record.",
+      "Augle stress-tests policy evidence, procurement analysis, and public consultation claims before parliamentary or judicial review does.",
     eyebrow: "Solutions · Government + public sector",
     heroTitle: {
       lines: ["Public decisions made", "on evidence that"],
@@ -1109,9 +1109,9 @@ export const SOLUTIONS: Solution[] = [
   {
     slug: "law-firms",
     navLabel: "Law firms",
-    metaTitle: "Law Firms — Solutions — Augle",
+    metaTitle: "AI Legal Research & Brief Review Tool for Law Firms | Augle",
     metaDescription:
-      "Augle for law firms — case law verification, expert evidence stress-testing, and regulatory applicability review. Multi-agent deliberation with legal integrity mode active.",
+      "Stress-test legal arguments and briefs with seven-agent adversarial review — Guardian operates in Legal integrity mode with statutory and jurisdiction verification.",
     eyebrow: "Solutions · Law firms",
     heroTitle: {
       lines: ["Expert evidence that", "won’t survive"],
@@ -1311,9 +1311,9 @@ export const SOLUTIONS: Solution[] = [
   {
     slug: "media",
     navLabel: "Media + journalism",
-    metaTitle: "Media + Journalism — Solutions — Augle",
+    metaTitle: "AI Fact-Checking Tool for Journalists & Newsrooms | Augle",
     metaDescription:
-      "Augle for media and journalism — source verification, statistical claim review, and investigative evidence stress-testing. Multi-agent deliberation for the journalism that enters the public record.",
+      "Augle stress-tests sources, statistics, and investigative claims with Guardian's Editorial integrity mode — before publication, not after.",
     eyebrow: "Solutions · Media + journalism",
     heroTitle: {
       lines: ["Published journalism", "is permanent."],
@@ -1514,9 +1514,9 @@ export const SOLUTIONS: Solution[] = [
   {
     slug: "policy",
     navLabel: "Policy + lawmakers",
-    metaTitle: "Policy + Lawmakers — Solutions — Augle",
+    metaTitle: "AI Legislative Evidence & Cost-Benefit Review Tool | Augle",
     metaDescription:
-      "Augle for policy analysts and lawmakers — cost-benefit methodology review, regulatory impact assessment, and legislative evidence stress-testing. Multi-agent deliberation for the evidence behind every policy decision.",
+      "Augle stress-tests cost-benefit methodology, regulatory impact assessments, and legislative evidence before it reaches the public record.",
     eyebrow: "Solutions · Policy + lawmakers",
     heroTitle: {
       lines: ["The evidence behind", "every policy decision"],
@@ -1718,9 +1718,9 @@ export const SOLUTIONS: Solution[] = [
   {
     slug: "research-labs",
     navLabel: "Research labs",
-    metaTitle: "Research Labs — Solutions — Augle",
+    metaTitle: "AI Assumption-Testing Tool for Research Labs | Augle",
     metaDescription:
-      "Augle for research labs — new drug target assessment, clinical trial design decisions, and landmark finding audits. Multi-agent deliberation in academic integrity mode.",
+      "Augle stress-tests research programme assumptions, trial design, and landmark findings in Academic integrity mode — before you commit the capital.",
     eyebrow: "Solutions · Research labs",
     heroTitle: {
       lines: ["The assumption", "your programme"],
@@ -1943,9 +1943,9 @@ export const SOLUTIONS: Solution[] = [
   {
     slug: "think-tanks",
     navLabel: "Think tanks + nonprofits",
-    metaTitle: "Think Tanks + Nonprofits — Solutions — Augle",
+    metaTitle: "AI Policy Research & Advocacy Evidence Review | Augle",
     metaDescription:
-      "Augle for think tanks and nonprofits — policy recommendation stress-testing, evidence base review, and advocacy position validation. Multi-agent deliberation for the research that shapes public debate.",
+      "Augle stress-tests policy recommendations, evidence bases, and advocacy positions before a rival institution or hostile commentator does.",
     eyebrow: "Solutions · Think tanks + nonprofits",
     heroTitle: {
       lines: ["Research that shapes", "public debate needs"],
@@ -2147,9 +2147,9 @@ export const SOLUTIONS: Solution[] = [
   {
     slug: "venture-capital",
     navLabel: "Venture capital + PE",
-    metaTitle: "Venture Capital + PE — Solutions — Augle",
+    metaTitle: "AI Investment Thesis & Market Sizing Review Tool | Augle",
     metaDescription:
-      "Augle for venture capital and private equity — investment thesis stress-testing, market sizing validation, and competitive landscape review. Multi-agent deliberation with financial integrity mode active.",
+      "Augle stress-tests investment theses, market sizing, and competitive moat claims with Guardian's Financial integrity mode — before capital is deployed.",
     eyebrow: "Solutions · Venture capital + PE",
     heroTitle: {
       lines: ["The thesis looks", "stronger than"],

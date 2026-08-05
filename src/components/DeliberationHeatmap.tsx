@@ -93,11 +93,11 @@ export function DeliberationHeatmap() {
   const selectedSessions: HeatmapSession[] = selectedDomain && selected ? selectedDomain.sessions[selected.grade] : [];
 
   return (
-    <div className="px-5 py-8 md:px-10 md:py-10 lg:px-[72px]">
+    <div className="px-5 py-5 md:px-10 md:py-7 lg:px-[72px]">
       <div className="flex flex-col gap-6 md:flex-row md:items-start">
         {/* HEATMAP SIDE */}
         <div className="min-w-0 flex-1">
-          <div className="mb-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mb-5 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
               <div className="font-serif text-lg text-ink">Domains × confidence grades</div>
               <div className="mt-0.5 text-xs text-subtle">Cell intensity = session density · darker = more sessions in that cell</div>
@@ -161,7 +161,7 @@ export function DeliberationHeatmap() {
                             type="button"
                             disabled={stats.n === 0}
                             onClick={() => setSelected({ domain: domain.name, grade })}
-                            className={`flex h-[52px] w-full flex-col items-center justify-center gap-0.5 rounded-[5px] outline-2 outline-transparent transition-[transform,outline] duration-100 ${cls} ${
+                            className={`flex h-11 w-full flex-col items-center justify-center gap-0.5 rounded-[5px] outline-2 outline-transparent transition-[transform,outline] duration-100 md:h-[52px] ${cls} ${
                               stats.n > 0 ? "cursor-pointer hover:scale-[1.05] hover:outline-rust/40" : "cursor-default"
                             } ${isActive ? "scale-[1.05] outline-rust" : ""}`}
                           >

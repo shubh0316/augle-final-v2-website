@@ -57,9 +57,9 @@ export const USE_CASES: UseCase[] = [
     slug: "universities",
     vertical: "Universities + academia",
     shortName: "Universities",
-    metaTitle: "Universities + Academia Use Cases — Augle",
+    metaTitle: "Dissertation Defence & Grant Review Examples | Augle",
     metaDescription:
-      "Three hypothetical Augle sessions for universities and academia — dissertation defence stress-testing, systematic review gap analysis, and NSF grant proposal review. Multi-agent deliberation in academic integrity mode.",
+      "Example Augle sessions for academia — dissertation defence stress-tests, systematic review gap analysis, and grant proposal review.",
     heroBody:
       "How Augle's multi-agent ensemble serves PhD candidates, faculty researchers, and academic teams — from dissertation defence stress-tests to grant proposal reviews. Each session illustrates realistic deliberation behaviour, unresolved objections, and the output that matters for academic work.",
     heroLinks: [
@@ -203,9 +203,9 @@ export const USE_CASES: UseCase[] = [
     slug: "research-labs",
     vertical: "Research labs",
     shortName: "Research labs",
-    metaTitle: "Research Labs Use Cases — Augle",
+    metaTitle: "Replication Review & TRL Assessment Examples | Augle",
     metaDescription:
-      "Three hypothetical Augle sessions for corporate and independent research labs — replication review, technology readiness assessment, and competitive intelligence. Multi-agent deliberation in academic integrity mode.",
+      "Example Augle sessions for research labs — replication review, technology readiness assessment, and competitive intelligence.",
     heroBody:
       "How Augle's multi-agent ensemble serves corporate R&D teams, independent research institutes, and laboratory directors — from replication reviews to technology readiness assessments. Each session illustrates how structured deliberation surfaces what peer review alone cannot: contested assumptions, measurement comparability problems, and intelligence blind spots.",
     heroLinks: [
@@ -349,9 +349,9 @@ export const USE_CASES: UseCase[] = [
     slug: "policy",
     vertical: "Policy + lawmakers",
     shortName: "Policy",
-    metaTitle: "Policy + Lawmakers Use Cases — Augle",
+    metaTitle: "Regulatory Impact & Bill Scoring Examples | Augle",
     metaDescription:
-      "Three hypothetical Augle sessions for policy analysts and lawmakers — regulatory impact review, infrastructure bill scoring, and public health mandate review. Multi-agent deliberation in editorial integrity mode.",
+      "Example Augle sessions for policy analysts — regulatory impact review, infrastructure bill scoring, and public health mandate review.",
     heroBody:
       "How Augle's multi-agent ensemble serves policy analysts, legislative staff, and government officials — from regulatory impact reviews to bill scoring. Each session shows how structured deliberation identifies the evidentiary gaps that legislation cannot afford to miss.",
     heroLinks: [
@@ -495,9 +495,9 @@ export const USE_CASES: UseCase[] = [
     slug: "law-firms",
     vertical: "Law firms",
     shortName: "Law firms",
-    metaTitle: "Law Firms Use Cases — Augle",
+    metaTitle: "Expert Witness Prep & Damages Review Examples | Augle",
     metaDescription:
-      "Three hypothetical Augle sessions for law firms — expert witness preparation, damages quantification, and regulatory enforcement preview. Multi-agent deliberation in legal integrity mode.",
+      "Example Augle sessions for law firms — expert witness preparation, damages quantification, and regulatory enforcement exposure previews.",
     heroBody:
       "How Augle's multi-agent ensemble serves litigation partners, regulatory counsel, and legal analysts — from expert witness preparation to enforcement exposure previews. Each session shows how structured deliberation identifies the arguments opposing counsel will make before they make them.",
     heroLinks: [
@@ -641,9 +641,9 @@ export const USE_CASES: UseCase[] = [
     slug: "venture-capital",
     vertical: "Venture capital + PE",
     shortName: "Venture capital",
-    metaTitle: "Venture Capital + PE Use Cases — Augle",
+    metaTitle: "Technical Due Diligence & TAM Validation Examples | Augle",
     metaDescription:
-      "Three hypothetical Augle sessions for venture capital and private equity — technical due diligence, market sizing validation, and portfolio stress testing. Multi-agent deliberation in academic and financial integrity modes.",
+      "Example Augle sessions for VC and PE — technical due diligence, market sizing validation, and portfolio stress testing.",
     heroBody:
       "How Augle's multi-agent ensemble serves venture partners, growth equity principals, and PE directors — from technical diligence to covenant stress testing. Each session shows how structured deliberation finds what management presentations obscure: benchmark mismatches, fragile assumptions, and probability ranges that point estimates hide.",
     heroLinks: [
@@ -788,9 +788,9 @@ export const USE_CASES: UseCase[] = [
     vertical: "Think tanks + nonprofits",
     shortName: "Think tanks",
     hubLabel: "Think tanks",
-    metaTitle: "Think Tanks + Nonprofits Use Cases — Augle",
+    metaTitle: "Pre-Publication Evidence Review Examples | Augle",
     metaDescription:
-      "Three hypothetical Augle sessions for think tanks and nonprofits — pre-publication evidence review, advocacy position stress testing, and grant panel evaluation. Multi-agent deliberation in academic and editorial integrity modes.",
+      "Example Augle sessions for think tanks and nonprofits — pre-publication evidence review, advocacy stress-testing, and grant panel evaluation.",
     heroBody:
       "How Augle's multi-agent ensemble serves senior fellows, policy directors, and programme officers — from pre-publication evidence review to grant evaluation panels. Each session shows how structured deliberation finds the arguments that will be made against your position before your opponents make them.",
     heroLinks: [
@@ -934,9 +934,9 @@ export const USE_CASES: UseCase[] = [
     slug: "enterprise",
     vertical: "Enterprise",
     shortName: "Enterprise",
-    metaTitle: "Enterprise Use Cases — Augle",
+    metaTitle: "Strategic Initiative & M&A Risk Review Examples | Augle",
     metaDescription:
-      "Three hypothetical Augle sessions for enterprise teams — strategic initiative review, M&A integration risk assessment, and operational benchmarking. Multi-agent deliberation in academic and financial integrity modes.",
+      "Example Augle sessions for enterprise teams — strategic initiative review, M&A integration risk assessment, and operational benchmarking.",
     heroBody:
       "How Augle's multi-agent ensemble serves CSOs, corporate development teams, and operations leaders — from strategic initiative validation to M&A integration risk assessment. Each session shows how structured deliberation finds the assumption buried in the deck that changes the whole recommendation.",
     heroLinks: [
@@ -1080,9 +1080,9 @@ export const USE_CASES: UseCase[] = [
     slug: "healthcare",
     vertical: "Healthcare + life sciences",
     shortName: "Healthcare",
-    metaTitle: "Healthcare + Life Sciences Use Cases — Augle",
+    metaTitle: "Clinical Evidence & Trial Design Review Examples | Augle",
     metaDescription:
-      "Three hypothetical Augle sessions for healthcare and life sciences — clinical evidence review, formulary decision briefing, and trial design review. Multi-agent deliberation in clinical integrity mode.",
+      "Example Augle sessions for healthcare teams — clinical evidence review, formulary decision briefing, and trial design review.",
     heroBody:
       "How Augle's multi-agent ensemble serves CMOs, pharmacy committees, and clinical development leaders — from technology adoption reviews to trial design validation. Each session shows how structured deliberation surfaces safety signals, evidence gaps, and protocol weaknesses before they become costly downstream problems.",
     heroLinks: [
@@ -1227,9 +1227,9 @@ export const USE_CASES: UseCase[] = [
     vertical: "Government",
     shortName: "Government",
     solutionsPageName: "Government + public sector",
-    metaTitle: "Government Use Cases — Augle",
+    metaTitle: "Programme Evaluation & Procurement Risk Examples | Augle",
     metaDescription:
-      "Three hypothetical Augle sessions for government agencies — programme evaluation, procurement risk assessment, and inter-agency intelligence briefing. Multi-agent deliberation in editorial integrity mode.",
+      "Example Augle sessions for government agencies — programme evaluation, procurement risk assessment, and inter-agency intelligence briefing.",
     heroBody:
       "How Augle's multi-agent ensemble serves agency deputies, procurement officers, and intelligence analysts — from programme reauthorisation to procurement risk. Each session shows how structured deliberation produces the kind of evidence-graded analysis that government decision-making requires but rarely gets.",
     heroLinks: [
@@ -1373,9 +1373,9 @@ export const USE_CASES: UseCase[] = [
     slug: "financial-services",
     vertical: "Financial services",
     shortName: "Financial services",
-    metaTitle: "Financial Services Use Cases — Augle",
+    metaTitle: "Credit Risk Model Validation Examples | Augle",
     metaDescription:
-      "Three hypothetical Augle sessions for financial services — credit risk model validation, rates strategy review, and compliance risk briefing. Multi-agent deliberation in financial integrity mode.",
+      "Example Augle sessions for financial services — credit risk model validation, rates strategy review, and compliance risk briefing.",
     heroBody:
       "How Augle's multi-agent ensemble serves CROs, portfolio managers, and compliance officers — from credit model validation to exam probability estimation. Each session shows how structured deliberation produces the evidence-graded analysis that regulatory environments demand and conventional review processes rarely achieve.",
     heroLinks: [
@@ -1519,9 +1519,9 @@ export const USE_CASES: UseCase[] = [
     slug: "media",
     vertical: "Media + journalism",
     shortName: "Media",
-    metaTitle: "Media + Journalism Use Cases — Augle",
+    metaTitle: "Pre-Publication Fact-Check Examples | Augle",
     metaDescription:
-      "Three hypothetical Augle sessions for media organisations — pre-publication fact review, misinformation source audit, and earnings story verification. Multi-agent deliberation in editorial and financial integrity modes.",
+      "Example Augle sessions for newsrooms — pre-publication fact review, misinformation source audits, and earnings story verification.",
     heroBody:
       "How Augle's multi-agent ensemble serves investigative editors, research directors, and business correspondents — from pre-publication fact review to earnings story verification. Each session shows how structured deliberation finds the evidentiary weaknesses that legal counsel and IR will exploit after publication.",
     heroLinks: [

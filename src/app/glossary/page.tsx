@@ -3,9 +3,9 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { GlossaryContent } from "./GlossaryContent";
 
 export const metadata: Metadata = {
-  title: "Glossary — Augle",
+  title: "AI Deliberation Glossary | Augle Terms Explained (Confidence Grades, Agents, More)",
   description:
-    "Definitions for Augle's core concepts — augmented deliberation, confidence grades, agent roles, corpus tiers, and session architecture.",
+    "Plain-language definitions for every Augle concept — confidence grades, the seven-agent ensemble, corpus tiers, and session architecture.",
 };
 
 export default function GlossaryPage() {

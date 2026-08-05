@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ViewTransition } from "react";
 import { IBM_Plex_Sans, Libre_Baskerville, IBM_Plex_Mono } from "next/font/google";
 import { Toaster } from "sonner";
 import "./globals.css";
@@ -25,9 +26,9 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Augle — Augmented deliberation",
+  title: "Augle | AI Research Tool for Evidence-Based Decisions",
   description:
-    "Augle's multi-agent ensemble maps what's settled, what's contested, and what's unknown — producing evidence-anchored findings with calibrated confidence grades before the stakes are live.",
+    "Augle runs your research question through a 7-agent AI ensemble that surfaces disagreement instead of hiding it. Get a calibrated confidence grade backed by verified sources.",
 };
 
 export default function RootLayout({
@@ -39,7 +40,9 @@ export default function RootLayout({
     <html lang="en" className={`${plexSans.variable} ${baskerville.variable} ${plexMono.variable}`}>
       <body className="flex min-h-screen flex-col bg-cream font-sans text-ink">
         <Navbar />
-        <div className="flex flex-1 flex-col">{children}</div>
+        <ViewTransition exit="page-fade-out" enter="page-fade-in">
+          <div className="flex flex-1 flex-col">{children}</div>
+        </ViewTransition>
         <FooterGate />
         <Toaster
           position="top-center"

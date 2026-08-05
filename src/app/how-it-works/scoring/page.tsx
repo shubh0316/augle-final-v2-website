@@ -5,9 +5,9 @@ import { CtaBanner } from "@/components/CtaBanner";
 import { eyebrow, sectionTitle } from "@/lib/styles";
 
 export const metadata: Metadata = {
-  title: "Confidence + Dissent Scoring — Augle",
+  title: "How AI Confidence Grades Work | Augle Scoring Methodology",
   description:
-    "How Augle grades findings — the four confidence grades, unidirectional propagation constraints, Grade Challenge mechanism, Contrarian objection classification, and the Verdict Invariance Requirement.",
+    "Augle's four confidence grades — Established, Probable, Contested, Gap — and the Grade Challenge mechanism that prevents overconfident findings.",
 };
 
 const GRADE_PREVIEW = [

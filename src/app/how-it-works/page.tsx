@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Fragment } from "react";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { CtaBanner } from "@/components/CtaBanner";
@@ -7,9 +8,9 @@ import { AgentIcon } from "@/components/AgentIcon";
 import { eyebrow, sectionTitle } from "@/lib/styles";
 
 export const metadata: Metadata = {
-  title: "How it works — Augle",
+  title: "How Augle Works | 7-Agent AI Research & Fact-Checking Process",
   description:
-    "Augle routes every research question through a multi-agent ensemble across three deliberation phases — Exploration, Deliberation, and Synthesis. Learn how structured disagreement produces calibrated, evidence-anchored findings.",
+    "See how Augle's seven AI agents debate, verify, and grade evidence in three phases — Exploration, Deliberation, Synthesis — before producing a calibrated finding.",
 };
 
 const HERO_LINKS = [
@@ -185,7 +186,7 @@ const GRADES = [
   },
   {
     label: "Probable",
-    cls: "bg-paper-alt text-body",
+    cls: "bg-[#E8F0F8] text-[#2A4A7A]",
     text: "Well-supported by available evidence but with material limitations — sample size, methodology constraints, or limited replication. The ceiling for most real-world findings.",
   },
   {
@@ -204,7 +205,7 @@ const DISSENT = [
   {
     from: "@Contrarian → @Synthesizer",
     strength: "Strong · Unresolved",
-    cls: "bg-conf-contested-bg text-conf-contested-text",
+    cls: "bg-svs-flagged-bg text-rust",
     text: '"The notification-triggered self-report measures post-interruption attentional recovery, not naturalistic attention — causally distinct constructs. The thesis conflates them throughout."',
     resolution:
       "Resolution condition: Direct comparison study of notification-triggered vs. researcher-initiated ESM on attentional outcomes",
@@ -212,14 +213,14 @@ const DISSENT = [
   {
     from: "@Contrarian → @Cartographer",
     strength: "Moderate · Resolved",
-    cls: "bg-conf-med-bg text-conf-med-text",
+    cls: "bg-[#2C2820] text-[#C79233]",
     text: '"The innovation claim may not be differentiated from the 2024 Friederici lab publication with functionally equivalent architecture."',
     resolution: "Resolved: Innovation reframed to structural differentiation in Phase 2",
   },
   {
     from: "@Contrarian → @Methodologist",
     strength: "Speculative · Noted",
-    cls: "bg-paper-alt text-muted",
+    cls: "bg-[#1E2428] text-[#6A9AAA]",
     text: '"The 3-item Likert operationalisation of attentional state has no published reliability data for smartphone delivery contexts."',
     resolution: "Resolution condition: Psychometric validation study for smartphone-delivered attentional measures",
   },
@@ -306,13 +307,13 @@ function AgentCardBlock({ card, full }: { card: AgentCardData; full?: boolean })
 export default function HowItWorksPage() {
   return (
     <>
-      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "How it works" }]} />
+      {/* <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "How it works" }]} /> */}
 
       {/* HERO */}
       <div className="border-b border-border">
         <div className="mx-auto max-w-[1280px] px-5 py-16 md:px-10 md:py-20 lg:px-[72px] lg:py-24">
           <div className={eyebrow}>The ensemble explained</div>
-          <h1 className="mb-6 max-w-3xl font-serif text-[42px] font-normal leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-[64px]">
+          <h1 className="mb-6 max-w-3xl font-serif text-[42px] font-normal leading-[1.12] tracking-tight text-ink sm:text-5xl lg:text-[64px]">
             The agents.
             <br />
             Three phases.
@@ -340,17 +341,17 @@ export default function HowItWorksPage() {
 
       {/* DISPATCH ORDER STRIP */}
       <div className="overflow-x-auto bg-ink px-5 py-5 md:px-10 lg:px-[72px]">
-        <div className="mx-auto flex max-w-[1280px] items-center gap-1">
+        <div className="mx-auto flex max-w-[1280px] items-center">
           {DISPATCH.map((d, i) => (
-            <div key={d.name} className="flex items-center gap-1">
-              <div className="flex flex-shrink-0 flex-col items-center px-2">
+            <Fragment key={d.name}>
+              <div className="flex min-w-0 flex-col items-center px-2 lg:flex-1">
                 <span className={`text-[11px] font-medium whitespace-nowrap ${d.rust ? "text-rust" : "text-offwhite"}`}>
                   {d.name}
                 </span>
                 <span className="font-mono text-[10px] whitespace-nowrap text-faint">{d.sub}</span>
               </div>
-              {i < DISPATCH.length - 1 && <span className="flex-shrink-0 text-base text-faint">→</span>}
-            </div>
+              {i < DISPATCH.length - 1 && <span className="flex-shrink-0 px-1 text-base text-faint">→</span>}
+            </Fragment>
           ))}
         </div>
       </div>

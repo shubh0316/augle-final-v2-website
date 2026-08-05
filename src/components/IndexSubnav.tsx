@@ -4,7 +4,7 @@ const LINKS = [
   { key: "overview", label: "Overview", href: "/index" },
   { key: "explorer", label: "Question explorer", href: "/index/explorer" },
   { key: "heatmap", label: "Heatmaps", href: "/index/heatmap" },
-  { key: "methodology", label: "Methodology", href: "/index/methodology" },
+  // { key: "methodology", label: "Methodology", href: "/index/methodology" },
 ] as const;
 
 type ActiveKey = (typeof LINKS)[number]["key"];
@@ -22,7 +22,7 @@ export function IndexSubnav({
   return (
     <div className={`flex-shrink-0 ${isDark ? "border-b border-border-dark bg-ink" : "border-b border-border bg-paper-alt"}`}>
       <div
-        className={`flex h-10 items-stretch overflow-x-auto px-5 md:h-12 md:px-10 lg:px-[72px] ${
+        className={`flex h-10 items-stretch overflow-x-auto px-5 md:px-10 lg:px-[72px] ${
           fullWidth ? "" : "mx-auto max-w-[1280px]"
         }`}
       >
@@ -33,7 +33,7 @@ export function IndexSubnav({
             <Link
               key={link.key}
               href={link.href}
-              className={`flex flex-shrink-0 items-center whitespace-nowrap border-r px-4 font-mono text-[12px] transition-colors md:text-[13px] ${
+              className={`flex flex-shrink-0 items-center whitespace-nowrap border-r px-4 text-[12px] transition-colors ${
                 isDark ? "border-border-dark" : "border-border"
               } ${
                 isActive
