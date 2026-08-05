@@ -174,10 +174,6 @@ export default function OutcomesPage() {
               confidence grade, every agent&apos;s contribution, and every Contrarian
               objection. Not summaries. The full structured record.
             </p>
-            <p className="mb-6 max-w-xl rounded border-l-2 border-border bg-paper px-4 py-3 font-mono text-[13px] text-subtle">
-              Example sessions, shown to demonstrate the record format. Live sessions publish
-              here as they run.
-            </p>
             <Link
               href="/outcomes/browser"
               className="inline-flex items-center gap-2 rounded bg-rust px-6 py-3.5 text-[15px] font-medium text-offwhite transition-opacity hover:opacity-90"
