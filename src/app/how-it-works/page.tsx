@@ -344,7 +344,7 @@ export default function HowItWorksPage() {
         <div className="mx-auto flex max-w-[1280px] items-center">
           {DISPATCH.map((d, i) => (
             <Fragment key={d.name}>
-              <div className="flex min-w-0 flex-col items-center px-2 lg:flex-1">
+              <div className="flex flex-shrink-0 flex-col items-center px-2 lg:min-w-0 lg:flex-1">
                 <span className={`text-[11px] font-medium whitespace-nowrap ${d.rust ? "text-rust" : "text-offwhite"}`}>
                   {d.name}
                 </span>

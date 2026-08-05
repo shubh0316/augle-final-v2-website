@@ -127,11 +127,6 @@ export default function IndexOverviewPage() {
               distributions across domains — as the corpus grows. Not what the models think. What
               the structured deliberation produces.
             </p>
-            <p className="max-w-xl rounded border-l-2 border-border-dark bg-paper-alt px-4 py-3 font-mono text-[13px] text-muted">
-              Index data is illustrative — representative of the dashboard structure as the corpus
-              accumulates resolved sessions. All figures are projected from the architecture and
-              session structure.
-            </p>
           </div>
           <div className="rounded-lg border border-border bg-paper-alt p-5">
             <div className="mb-3.5 flex items-center gap-2 font-mono text-[10px] tracking-[0.08em] text-rust uppercase">

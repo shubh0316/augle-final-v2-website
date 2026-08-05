@@ -249,13 +249,28 @@ export default async function ResearchPage() {
             </p>
             <div className="mb-3 rounded-md border border-border-dark bg-ink-2 p-5 font-mono text-xs leading-[1.7] text-subtle">
               Kelly, C., &amp; Saxena, S. (2026). Augmented Deliberation via Seven-Agent
-              Ensemble: Architecture, Phase Design, and Confidence Propagation. Zenodo.
-              https://doi.org/10.5281/zenodo.[DOI]
+              Ensemble: Architecture, Phase Design, and Confidence Propagation.{" "}
+              <a
+                href="http://dx.doi.org/10.2139/ssrn.6880718"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-offwhite"
+              >
+                SSRN
+              </a>
+              . https://doi.org/10.2139/ssrn.6880718 ·{" "}
+              <a
+                href="https://doi.org/10.5281/zenodo.21443526"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-offwhite"
+              >
+                Zenodo
+              </a>
+              . https://doi.org/10.5281/zenodo.21443526
             </div>
             <p className="text-[13px] leading-[1.6] text-faint">
-              Replace [DOI] with the specific paper DOI from Zenodo. Each paper has its own
-              persistent identifier. BibTeX and RIS formats available on each paper&apos;s
-              Zenodo record page.
+              BibTeX and RIS formats available on each paper&apos;s Zenodo record page.
             </p>
           </div>
           <div>
