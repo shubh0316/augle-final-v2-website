@@ -61,7 +61,7 @@ const COLUMNS = [
       { href: "/use-cases", label: "Use cases" },
       { href: "/glossary", label: "Glossary" },
       { href: "/deliberation-index", label: "Deliberation index" },
-      { href: "/outcomes/rag-hallucination-reduction", label: "Deliberation sessions" },
+      { href: "/outcomes", label: "Deliberation sessions" },
       { href: "/investor-access", label: "Corpus training" },
       { href: "/research", label: "Research papers" },
     ],
