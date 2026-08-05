@@ -24,10 +24,26 @@ const plexMono = IBM_Plex_Mono({
   weight: ["300", "400", "500"],
 });
 //TODO: there are only 34 metadata tags have to add other metadata tags.
+const title = "Augle | AI Research Tool for Evidence-Based Decisions";
+const description =
+  "Augle runs your research question through a multi-agents AI ensemble that surfaces disagreement instead of hiding it. Get a calibrated confidence grade backed by verified sources."; //changed metadata description "7-agents"
+
 export const metadata: Metadata = {
-  title: "Augle | AI Research Tool for Evidence-Based Decisions",
-  description:
-    "Augle runs your research question through a multi-agents AI ensemble that surfaces disagreement instead of hiding it. Get a calibrated confidence grade backed by verified sources.", //changed metadata description "7-agents"
+  metadataBase: new URL("https://www.augle.com"),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: "/",
+    siteName: "Augle",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function RootLayout({
