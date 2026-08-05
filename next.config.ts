@@ -4,9 +4,6 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: __dirname,
   },
-  experimental: {
-    viewTransition: true,
-  },
   async redirects() {
     return [{ source: "/company", destination: "/about", permanent: true }];
   },

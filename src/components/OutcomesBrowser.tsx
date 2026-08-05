@@ -1037,7 +1037,7 @@ export function OutcomesBrowser() {
   }
 
   return (
-    <div className="flex flex-col md:h-[760px]">
+    <div className="flex min-h-0 flex-1 flex-col">
       {/* FILTER BAR */}
       <div className="flex flex-wrap items-center gap-3 border-b border-border bg-paper px-5 py-3 md:px-10">
         <span className="font-mono text-[10px] tracking-[0.06em] text-subtle uppercase">Filter</span>

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function OutcomesBrowserPage() {
   return (
-    <>
+    <div className="flex h-[calc(100dvh-4rem)] flex-col overflow-hidden">
       <Breadcrumb
         items={[{ label: "Home", href: "/" }, { label: "Outcomes", href: "/outcomes" }, { label: "Session browser" }]}
       />
@@ -24,6 +24,6 @@ export default function OutcomesBrowserPage() {
         </p>
       </div>
       <OutcomesBrowser />
-    </>
+    </div>
   );
 }
