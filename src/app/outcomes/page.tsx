@@ -468,7 +468,7 @@ export default function OutcomesPage() {
               dataset that does not exist anywhere else: how a structured ensemble reasons,
               argues, and quantifies what it does and doesn&apos;t know.
             </p>
-            <Link href="/index" className="text-sm font-medium text-rust">
+            <Link href="/deliberation-index" className="text-sm font-medium text-rust">
               View the Deliberation Index →
             </Link>
           </div>
@@ -501,7 +501,7 @@ export default function OutcomesPage() {
         primaryLabel="Join waitlist"
         primaryHref="/waitlist"
         secondaryLabel="Deliberation Index"
-        secondaryHref="/index"
+        secondaryHref="/deliberation-index"
       />
     </>
   );

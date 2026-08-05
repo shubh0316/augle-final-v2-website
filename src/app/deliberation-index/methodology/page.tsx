@@ -11,7 +11,7 @@ export default function MethodologyPage() {
   return (
     <>
       <Breadcrumb
-        items={[{ label: "Home", href: "/" }, { label: "Index", href: "/index" }, { label: "Methodology" }]}
+        items={[{ label: "Home", href: "/" }, { label: "Index", href: "/deliberation-index" }, { label: "Methodology" }]}
       />
       <div className="mx-auto max-w-[1280px] px-5 py-16 md:px-10 md:py-24 lg:px-[72px]">
         <h1 className={sectionTitle}>Methodology</h1>

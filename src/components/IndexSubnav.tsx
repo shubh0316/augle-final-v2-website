@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 const LINKS = [
-  { key: "overview", label: "Overview", href: "/index" },
-  { key: "explorer", label: "Question explorer", href: "/index/explorer" },
-  { key: "heatmap", label: "Heatmaps", href: "/index/heatmap" },
-  // { key: "methodology", label: "Methodology", href: "/index/methodology" },
+  { key: "overview", label: "Overview", href: "/deliberation-index" },
+  { key: "explorer", label: "Question explorer", href: "/deliberation-index/explorer" },
+  { key: "heatmap", label: "Heatmaps", href: "/deliberation-index/heatmap" },
+  // { key: "methodology", label: "Methodology", href: "/deliberation-index/methodology" },
 ] as const;
 
 type ActiveKey = (typeof LINKS)[number]["key"];
