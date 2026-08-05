@@ -31,9 +31,11 @@ export function Logo({
       className={className}
       aria-label="Augle"
     >
-      {WORDMARK_PATHS.map((d) => (
-        <path key={d.slice(0, 16)} d={d} fill={wordmarkFill} />
-      ))}
+      <g transform="translate(-24 0)">
+        {WORDMARK_PATHS.map((d) => (
+          <path key={d.slice(0, 16)} d={d} fill={wordmarkFill} />
+        ))}
+      </g>
       {MARK_PATHS.map((d) => (
         <path key={d.slice(0, 16)} fillRule="evenodd" clipRule="evenodd" d={d} fill="#C15F3C" />
       ))}
