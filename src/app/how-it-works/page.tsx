@@ -89,7 +89,7 @@ type AgentCardData = {
 const GUARDIAN_CARD: AgentCardData = {
   id: "guardian",
   roleBadge: "Independent integrity layer",
-  model: "Claude Sonnet 4.6 · identity hidden",
+  model: "Anthropic· identity hidden",
   tempPct: 10,
   tempLabel: "T = 0.1",
   desc: "The Guardian operates exclusively at phase boundaries. It does not produce research findings or participate in deliberation. Its model identity is hidden from all user-facing surfaces — including the other agents — to prevent anchoring effects. It holds halt authority over the entire session.",
@@ -109,7 +109,7 @@ const AGENT_CARDS: AgentCardData[] = [
   {
     id: "topic-architect",
     roleBadge: "Session orchestration",
-    model: "Claude Sonnet 4.6",
+    model: "Anthropic",
     tempPct: 20,
     tempLabel: "T = 0.2",
     desc: "The only agent with a direct user-facing interface. Fires once at session initialization. Manages dispatch sequencing, phase transitions, and final delivery. Explicitly forbidden from editorializing or softening any agent's output.",
@@ -121,7 +121,7 @@ const AGENT_CARDS: AgentCardData[] = [
   {
     id: "cartographer",
     roleBadge: "Landscape mapping",
-    model: "Gemini 3.1 Pro",
+    model: "Google",
     tempPct: 80,
     tempLabel: "T = 0.8",
     desc: "Dispatched first in every phase. Produces a five-component landscape: restated question, scope boundaries, evidence terrain map (settled / contested / unknown), evidence nodes with source and limitations, and a knowledge gap register.",
@@ -130,7 +130,7 @@ const AGENT_CARDS: AgentCardData[] = [
   {
     id: "methodologist",
     roleBadge: "Validity assessment",
-    model: "GPT-4o",
+    model: "OpenAI",
     tempPct: 50,
     tempLabel: "T = 0.5",
     desc: "Evaluates each evidence node across four dimensions: internal validity, external validity, construct validity, and methodology-claim match. Issues confidence bounds — Established, Probable, Contested, or Gap — as hard constraints on the Synthesizer. Cannot be overridden.",
@@ -142,7 +142,7 @@ const AGENT_CARDS: AgentCardData[] = [
   {
     id: "contrarian",
     roleBadge: "Adversarial pressure",
-    model: "Claude Sonnet 4.6 / Opus 4.6",
+    model: "Anthropic",
     tempPct: 100,
     tempLabel: "T = 1.0",
     desc: "Runs at maximum temperature to maximize output variation and reduce sycophantic convergence. Must steelman every claim before challenging it. Each objection specifies a resolution condition and a strength grade. Unresolved Strong objections appear verbatim in the final output.",
@@ -154,7 +154,7 @@ const AGENT_CARDS: AgentCardData[] = [
   {
     id: "synthesizer",
     roleBadge: "Conclusion + finding",
-    model: "GPT-4o",
+    model: "OpenAI",
     tempPct: 0,
     tempLabel: "T = 0.0",
     desc: "Temperature is locked at zero — a hard architectural requirement for deterministic verdict production. Anchors its conclusion exclusively to the structured evidence nodes registry, not the discourse thread. Subject to three inviolable constraints that cannot be overridden by any other agent.",
@@ -167,7 +167,7 @@ const AGENT_CARDS: AgentCardData[] = [
   {
     id: "pragmatist",
     roleBadge: "Application notes",
-    model: "Grok 4.1 Fast",
+    model: "x AI",
     tempPct: 30,
     tempLabel: "T = 0.3",
     desc: "Fires in Phase 3 only. Converts the Synthesizer's finding into actionable output tailored to the user's specific context. Inherits the Synthesizer's confidence ceiling as an absolute constraint — cannot produce recommendations more confident than the synthesis permits.",
@@ -314,7 +314,9 @@ export default function HowItWorksPage() {
         <div className="mx-auto max-w-[1280px] px-5 py-16 md:px-10 md:py-20 lg:px-[72px] lg:py-24">
           <div className={eyebrow}>The ensemble explained</div>
           <h1 className="mb-6 max-w-3xl font-serif text-[42px] font-normal leading-[1.12] tracking-tight text-ink sm:text-5xl lg:text-[64px]">
-            The agents.
+            Four models.
+            <br />
+            Seven agents.
             <br />
             Three phases.
             <br />
@@ -502,7 +504,7 @@ export default function HowItWorksPage() {
             sits in.
           </p>
           <div className="max-w-2xl rounded-lg border border-border bg-cream p-7">
-            <div className="mb-1 font-serif text-[22px] text-ink">Academia</div>
+            <div className="mb-1 font-serif text-[22px] text-ink">Research</div>
             <div className="mb-4 font-mono text-[13px] text-rust italic">For open research questions</div>
             <p className="mb-5 text-sm leading-relaxed text-body">
               Designed for the research questions that don&apos;t resolve to a binary outcome — grant

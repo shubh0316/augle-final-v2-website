@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ContactForm } from "@/components/ContactForm";
+import { AugleIconAnimation } from "@/components/AugleIconAnimation";
 import { eyebrow, sectionTitle } from "@/lib/styles";
 
 export const metadata: Metadata = {
@@ -45,21 +46,6 @@ const CHANNELS = [
   },
 ];
 
-const TEAM = [
-  {
-    role: "Co-Founder · CEO",
-    name: "Cory Kelly",
-    bio: "Product design and strategy. 15+ years of UI/UX and product leadership. Responsible for Augle's product architecture, design system, investor relations, and commercial strategy.",
-    email: "cory@augle.com",
-  },
-  {
-    role: "Co-Founder · CTO",
-    name: "Shubhanker Saxena",
-    bio: "Engineering and infrastructure. Responsible for the deliberation engine, corpus pipeline, API architecture, and all production systems. Wozniak to Cory's Jobs.",
-    email: "shub@augle.com",
-  },
-];
-
 export default function ContactPage() {
   return (
     <>
@@ -73,19 +59,25 @@ export default function ContactPage() {
 
       {/* HERO */}
       <div className="border-b border-border">
-        <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-12 px-5 py-16 md:px-10 md:py-24 lg:grid-cols-2 lg:gap-20 lg:px-[72px]">
-          <div>
-            <div className={eyebrow}>Contact</div>
-            <h1 className="mb-5 font-serif text-4xl leading-[1.12] font-normal tracking-tight text-ink lg:text-[52px]">
-              Talk to the people building this.
-            </h1>
-            <p className="text-lg leading-[1.85] text-body">
-              We&apos;re a small team. When you reach out to Augle, you reach the founders.
-              Whether you have a product question, a research idea, an enterprise inquiry, or
-              press coverage in mind — we read and respond to everything.
-            </p>
+        <div className="mx-auto max-w-[1280px] px-5 py-16 md:px-10 md:py-24 lg:px-[72px]">
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
+            <div>
+              <div className={eyebrow}>Contact</div>
+              <h1 className="mb-5 font-serif text-4xl leading-[1.12] font-normal tracking-tight text-ink lg:text-[52px]">
+                Talk to the people building this.
+              </h1>
+              <p className="text-lg leading-[1.85] text-body">
+                We&apos;re a small team. When you reach out to Augle, you reach the founders.
+                Whether you have a product question, a research idea, an enterprise inquiry, or
+                press coverage in mind — we read and respond to everything.
+              </p>
+            </div>
+            <div className="flex items-center justify-center">
+              <AugleIconAnimation className="w-full max-w-70" />
+            </div>
           </div>
-          <div className="flex flex-col gap-3">
+
+          <div className="mt-12 grid grid-cols-1 gap-3 sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-2">
             {CHANNELS.map((channel) => (
               <div
                 key={channel.label}
@@ -131,28 +123,6 @@ export default function ContactPage() {
             </p>
           </div>
           <ContactForm />
-        </div>
-      </div>
-
-      {/* TEAM */}
-      <div className="mx-auto max-w-[1280px] px-5 py-16 md:px-10 md:py-20 lg:px-[72px]">
-        <div className={eyebrow}>The team</div>
-        <h2 className={`${sectionTitle} mb-3`}>
-          Two founders.
-          <br />
-          Building in public.
-        </h2>
-        <div className="mt-10 grid grid-cols-1 gap-3 md:grid-cols-2">
-          {TEAM.map((member) => (
-            <div key={member.name} className="rounded-lg border border-border bg-paper p-7">
-              <div className="mb-1.5 font-mono text-[10px] tracking-[0.08em] text-rust uppercase">
-                {member.role}
-              </div>
-              <div className="mb-2 font-serif text-2xl text-ink">{member.name}</div>
-              <p className="mb-3 text-[13px] leading-[1.7] text-body">{member.bio}</p>
-              <div className="font-mono text-xs text-rust">{member.email}</div>
-            </div>
-          ))}
         </div>
       </div>
     </>

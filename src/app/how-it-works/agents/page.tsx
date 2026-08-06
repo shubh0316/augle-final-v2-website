@@ -113,7 +113,7 @@ const SPECS: AgentSpec[] = [
     id: "guardian",
     num: "Agent 04",
     roleLabel: "Independent integrity layer",
-    model: "Identity withheld",
+    model: "Anthropic & Augle",
     decodingPct: 10,
     decodingLabel: "Near-deterministic",
     actType: "INTEGRITY",
@@ -696,9 +696,7 @@ export default function AgentsPage() {
       <CtaBanner
         title={
           <>
-            The agents.
-            <br />
-            One deliberation.
+            Four models. Seven agents. One deliberation.
           </>
         }
         body={
