@@ -1,8 +1,61 @@
-"use client";
-
-import Lottie from "lottie-react";
-import animationData from "@/app/augle_icon_animation.json";
+const PARTS = [
+  {
+    id: "part_1_bottom_right",
+    delayMs: 0,
+    d: "M194.375 152.331C197.48 140.657 209.466 131.098 221.091 131.098H241.093C245.929 131.098 248.745 135.038 247.518 139.927L236.833 180.132C228.6 211.216 204.339 239.234 173.797 253.537C168.959 255.799 168.021 251.857 169.031 248.136L194.375 152.404V152.331Z",
+  },
+  {
+    id: "part_4_top_right",
+    delayMs: 250,
+    d: "M207.132 50.636L244.076 115.064C246.834 119.958 245.166 123.903 240.375 123.903H218.528C206.914 123.903 191.89 114.334 185.14 102.646L146.018 34.4192C143.259 29.5249 144.929 25.5801 149.719 25.5801H162.349C181.148 25.5801 197.769 35.6608 207.06 50.7087L207.132 50.636Z",
+  },
+  {
+    id: "part_2_bottom_left",
+    delayMs: 500,
+    d: "M40.673 204.365L3.72856 139.937C0.970433 135.042 2.63988 131.098 7.43033 131.098H29.2776C40.8909 131.098 55.9153 140.667 62.6653 152.355L101.787 220.581C104.546 225.476 102.876 229.421 98.0855 229.421H85.4564C66.6575 229.421 50.0364 219.34 40.7458 204.292L40.673 204.365Z",
+  },
+  {
+    id: "part_6_top_center",
+    delayMs: 750,
+    d: "M76.5452 123.903H164.669C181.945 123.903 184.341 118.362 176.066 104.071L136.722 35.6051C127.431 19.4182 113.348 7.67904 97.3784 1.18976C92.8779 -0.633052 88.9583 -1.07027 87.2887 5.12737L61.6644 101.3C58.6882 112.529 62.8256 123.83 76.5452 123.83V123.903Z",
+  },
+  {
+    id: "part_3_bottom_center",
+    delayMs: 1000,
+    d: "M172.061 131.098L83.9506 131.098C66.6043 131.098 64.2822 136.639 72.5561 150.93L111.894 219.396C121.184 235.582 135.264 247.322 151.231 253.81C155.731 255.634 159.65 256.071 161.32 249.874L186.94 153.701C189.916 142.473 185.779 131.171 172.061 131.171V131.098Z",
+  },
+  {
+    id: "part_5_top_left",
+    delayMs: 1250,
+    d: "M53.9692 102.67C50.833 114.345 38.7264 123.903 26.9839 123.903H6.7811C1.89452 123.903 -0.950011 119.963 0.289869 115.074L11.084 74.8694C19.3985 43.7853 43.9045 15.7659 74.7557 1.46433C79.6422 -0.797667 80.5902 3.1425 79.5693 6.86383L53.9692 102.597V102.67Z",
+  },
+];
 
 export function AugleIconAnimation({ className }: { className?: string }) {
-  return <Lottie animationData={animationData} loop className={className} />;
+  return (
+    <svg viewBox="0 0 248 255" fill="#C15F3C" className={className} aria-hidden="true">
+      <style>{`
+        @keyframes augle-icon-pulse {
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.35; transform: scale(0.88); }
+        }
+        .augle-icon-part {
+          transform-origin: center;
+          transform-box: fill-box;
+          animation: augle-icon-pulse 1.5s ease-in-out infinite;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .augle-icon-part { animation: none !important; }
+        }
+      `}</style>
+      {PARTS.map((part) => (
+        <path
+          key={part.id}
+          d={part.d}
+          className="augle-icon-part"
+          style={{ animationDelay: `${part.delayMs}ms` }}
+        />
+      ))}
+    </svg>
+  );
 }
