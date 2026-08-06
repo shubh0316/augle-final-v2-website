@@ -89,7 +89,7 @@ type AgentCardData = {
 const GUARDIAN_CARD: AgentCardData = {
   id: "guardian",
   roleBadge: "Independent integrity layer",
-  model: "Anthropic· identity hidden",
+  model: "Anthropic + Augle· identity hidden",
   tempPct: 10,
   tempLabel: "T = 0.1",
   desc: "The Guardian operates exclusively at phase boundaries. It does not produce research findings or participate in deliberation. Its model identity is hidden from all user-facing surfaces — including the other agents — to prevent anchoring effects. It holds halt authority over the entire session.",
@@ -167,7 +167,7 @@ const AGENT_CARDS: AgentCardData[] = [
   {
     id: "pragmatist",
     roleBadge: "Application notes",
-    model: "x AI",
+    model: "xAI",
     tempPct: 30,
     tempLabel: "T = 0.3",
     desc: "Fires in Phase 3 only. Converts the Synthesizer's finding into actionable output tailored to the user's specific context. Inherits the Synthesizer's confidence ceiling as an absolute constraint — cannot produce recommendations more confident than the synthesis permits.",
