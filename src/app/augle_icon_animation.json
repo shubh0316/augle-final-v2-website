@@ -130,5 +130,5 @@
     "CSS mapping: shared @keyframes dimPulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.35; transform: scale(0.88); } }, with animation-delay set per path per the delayMs values above.",
     "Respect prefers-reduced-motion: fall back to static #C15F3C fill, opacity 1, no animation.",
     "Superseded prior directions, kept here for reference only: (1) two-color fill swap #C15F3C\u2192#D97858 sequential and shuffled variants, (2) whole-icon rotation + traveling color wave, (3) whole-icon single synchronized pulse, (4) per-petal scale-up-while-glowing. This dim/shrink, single-color, shuffled-order version is the one to build."
-  ]
+  ] 
 }

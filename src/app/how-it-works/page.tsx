@@ -493,7 +493,7 @@ export default function HowItWorksPage() {
         </div>
       </div>
 
-      {/* MODES */}
+      {/* MODES GUARDIAN */}
       <div className="border-y border-border bg-paper py-16 md:py-24">
         <div className="mx-auto max-w-[1280px] px-5 md:px-10 lg:px-[72px]">
           <div className={eyebrow}>The engine</div>
