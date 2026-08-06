@@ -286,7 +286,7 @@ function AgentCardBlock({ card, full }: { card: AgentCardData; full?: boolean })
         </div>
         <p className="text-[13px] leading-relaxed text-body">{card.desc}</p>
       </div>
-      <div className="mt-4 flex flex-col gap-1.5 md:mt-0">
+      <div className={`flex flex-col gap-1.5 ${full ? "mt-4 md:mt-0" : "mt-4"}`}>
         {card.permitted?.map((text) => (
           <div key={text} className="flex items-start gap-2">
             <span className="mt-0.5 font-mono text-[10px] text-rust">✓</span>
