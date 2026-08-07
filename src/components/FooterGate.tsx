@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import { Footer } from "./Footer";
 
-const NO_FOOTER_PATHS = ["/outcomes/browser", "/index/explorer", "/index/heatmap"];
+const NO_FOOTER_PATHS = ["/outcomes/browser", "/deliberation-index/explorer", "/deliberation-index/heatmap"];
 
 export function FooterGate() {
   const pathname = usePathname();

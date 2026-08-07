@@ -565,7 +565,6 @@ export default function HowItWorksPage() {
           </div>
         </div>
       </div>
-
       <CtaBanner
         title="See it in action."
         body="Join waitlist and run a session on a question that matters to your work."
