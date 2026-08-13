@@ -100,7 +100,7 @@ export default function HomePage() {
     <>
       {/* HERO */}
       <div className="border-b border-border">
-        <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-12 px-5 py-16 md:px-10 md:py-20 lg:grid-cols-[1fr_420px] lg:items-start lg:gap-24 lg:px-[72px] lg:py-28">
+        <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-12 px-5 py-16 md:px-10 md:py-20 lg:grid-cols-[1fr_380px] lg:items-start lg:gap-16 lg:px-[72px] lg:py-28">
           <div>
             <div className={eyebrow}>Augle</div>
             <h1 className="mb-7 font-serif text-[42px] font-normal leading-[1.12] tracking-tight text-ink sm:text-5xl lg:text-[64px]">

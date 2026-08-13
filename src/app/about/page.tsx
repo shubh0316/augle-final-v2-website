@@ -10,6 +10,11 @@ export const metadata: Metadata = {
     "Augle builds structured multi-agent AI deliberation infrastructure — seven specialized agents, evidence-anchored findings, and calibrated confidence grades for high-stakes research.",
 };
 
+const MISSION_VIDEOS = [
+  { id: "3ZB_tOA_9eg", title: "Augle — Engineered for the questions that matter most." },
+  { id: "f8kmHakMEW0", title: "Augle — Augmented Deliberation." },
+];
+
 const BUILT_ITEMS = [
   {
     tag: "01 · Architecture",
@@ -130,6 +135,23 @@ export default function AboutPage() {
             so you know exactly where the edges of your knowledge are before the
             stakes are live.
           </p>
+
+          <div className="mt-10 grid max-w-3xl grid-cols-1 gap-5 sm:grid-cols-2">
+            {MISSION_VIDEOS.map((video) => (
+              <div
+                key={video.id}
+                className="aspect-video overflow-hidden rounded-lg border border-border"
+              >
+                <iframe
+                  className="h-full w-full"
+                  src={`https://www.youtube.com/embed/${video.id}`}
+                  title={video.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
