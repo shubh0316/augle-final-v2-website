@@ -11,9 +11,29 @@ export const metadata: Metadata = {
 };
 
 const MISSION_VIDEOS = [
-  { id: "3ZB_tOA_9eg", title: "Augle — Engineered for the questions that matter most." },
-  { id: "f8kmHakMEW0", title: "Augle — Augmented Deliberation." },
+  {
+    id: "3ZB_tOA_9eg",
+    title: "Augle — Engineered for the questions that matter most.",
+    description:
+      "Ask a frontier model a question and you get a confident answer. Ask Augle and you get an evidence gathered, assumptions challenged, and integrity maintained answer, delivered from a structured, auditable, reality-graded finding.",
+  },
+  {
+    id: "f8kmHakMEW0",
+    title: "Augle — Augmented Deliberation.",
+    description:
+      "An Augled question returns gathered evidence, challenged assumptions, and maintained integrity, resulting in a structured, auditable, reality-graded finding. That's Augmented Deliberation. That's Augle.",
+  },
 ];
+
+const VIDEO_JSONLD = MISSION_VIDEOS.map((video, i) => ({
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  name: `Augle Corporate Overview Video ${i + 1}`,
+  description: `The ${i === 0 ? "first" : "second"} official embedded company profile video featured on the augle.com About page.`,
+  thumbnailUrl: `https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`,
+  uploadDate: "2026-08-14T00:00:00+00:00",
+  embedUrl: `https://www.youtube.com/embed/${video.id}`,
+}));
 
 const BUILT_ITEMS = [
   {
@@ -89,6 +109,10 @@ const RESEARCH_ITEMS = [
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(VIDEO_JSONLD) }}
+      />
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "About" }]} />
 
       {/* HERO */}
@@ -138,17 +162,17 @@ export default function AboutPage() {
 
           <div className="mt-10 grid max-w-3xl grid-cols-1 gap-5 sm:grid-cols-2">
             {MISSION_VIDEOS.map((video) => (
-              <div
-                key={video.id}
-                className="aspect-video overflow-hidden rounded-lg border border-border"
-              >
-                <iframe
-                  className="h-full w-full"
-                  src={`https://www.youtube.com/embed/${video.id}`}
-                  title={video.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                />
+              <div key={video.id}>
+                <div className="aspect-video overflow-hidden rounded-lg border border-border">
+                  <iframe
+                    className="h-full w-full"
+                    src={`https://www.youtube.com/embed/${video.id}`}
+                    title={video.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+                <p className="mt-3 text-[13px] leading-[1.7] text-body">{video.description}</p>
               </div>
             ))}
           </div>
