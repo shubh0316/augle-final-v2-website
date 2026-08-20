@@ -24,7 +24,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const outcome = OUTCOMES.find((o) => o.slug === slug);
   if (!outcome) return {};
-  return { title: outcome.title, description: outcome.description };
+  return { title: outcome.title };
 }
 
 const TAG_CLASS: Record<SessionTagVariant, string> = {

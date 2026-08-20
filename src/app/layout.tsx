@@ -26,7 +26,7 @@ const plexMono = IBM_Plex_Mono({
 //TODO: there are only 34 metadata tags have to add other metadata tags.
 const title = "Augle | AI Research Tool for Evidence-Based Decisions";
 const description =
-  "Augle runs your research question through a multi-agents AI ensemble that surfaces disagreement instead of hiding it. Get a calibrated confidence grade backed by verified sources."; //changed metadata description "7-agents"
+  "Augle runs your research question through a multi-agent AI ensemble that surfaces disagreement instead of hiding it — with a calibrated confidence grade.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.augle.com"),
@@ -60,6 +60,34 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
 };
 
+const ORGANIZATION_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://augle.com",
+  name: "Augle",
+  legalName: "Augle, Inc.",
+  url: "https://augle.com",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://augle.com",
+    caption: "Augle Logo",
+  },
+  description:
+    "A multi-agent AI deliberation platform for evidence-based research and corpus-driven document synthesis.",
+  alternateName: ["Augle Research", "Augle Deliberation Engine", "Augle AI Research Platform"],
+  email: "cory@augle.com",
+  knowsAbout: [
+    "Multi-Agent AI",
+    "Deliberative Reasoning",
+    "Confidence Calibration",
+    "Corpus-Driven Document Synthesis",
+    "Adversarial Pre-Submission Review",
+    "Academic Research Integration",
+  ],
+  publishingPrinciples: "https://augle.com",
+  sameAs: ["https://linkedin.com", "https://twitter.com"],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -68,6 +96,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${plexSans.variable} ${baskerville.variable} ${plexMono.variable}`}>
       <body className="flex min-h-screen flex-col bg-cream font-sans text-ink">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_JSONLD) }}
+        />
         <Navbar />
         <div className="flex flex-1 flex-col">{children}</div>
         <FooterGate />

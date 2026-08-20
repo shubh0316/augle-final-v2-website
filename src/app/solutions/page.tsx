@@ -6,7 +6,7 @@ import { btnPrimary, eyebrow } from "@/lib/styles";
 export const metadata: Metadata = {
   title: "Solutions — Augle",
   description:
-    "Augle's multi-agent deliberation ensemble serves researchers, analysts, and decision-makers across eleven verticals — from universities and law firms to venture capital, healthcare, and government.",
+    "Augle's multi-agent deliberation ensemble serves researchers, analysts, and decision-makers across eleven verticals — from universities to venture capital.",
 };
 
 /** Listing-page-only content: shorter persona line + single question + tags per vertical.

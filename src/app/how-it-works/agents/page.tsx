@@ -9,7 +9,7 @@ import { eyebrow } from "@/lib/styles";
 export const metadata: Metadata = {
   title: "The 7 AI Agents Behind Augle | Roles, Models & Temperature Settings",
   description:
-    "Full specs for Augle's seven agents — Guardian, Cartographer, Methodologist, Contrarian, Synthesizer, Pragmatist, Topic Architect — model assignment and permitted actions for each.",
+    "Full specs for Augle's seven agents — Guardian, Cartographer, Methodologist, Contrarian, Synthesizer, Pragmatist, Topic Architect — model and permitted actions.",
 };
 
 function agent(id: string) {

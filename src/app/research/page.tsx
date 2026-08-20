@@ -8,7 +8,7 @@ import { getZenodoPapers } from "@/lib/zenodo";
 export const metadata: Metadata = {
   title: "Augle Research Papers | 7 Published Studies on AI Deliberation Architecture",
   description:
-    "Seven peer-reviewed papers by Cory Kelly and Shubhanker Saxena on multi-agent deliberation, corpus infrastructure, and calibration scoring. Published on Zenodo and SSRN.",
+    "Seven peer-reviewed papers by Cory Kelly and Shubhanker Saxena on multi-agent deliberation, corpus infrastructure, and calibration scoring.",
 };
 
 // Used only if the live Zenodo fetch fails — last-known-good snapshot so the page never breaks.

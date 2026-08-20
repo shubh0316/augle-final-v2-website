@@ -10,7 +10,7 @@ import { eyebrow, sectionTitle } from "@/lib/styles";
 export const metadata: Metadata = {
   title: "How Augle Works | 7-Agent AI Research & Fact-Checking Process",
   description:
-    "See how Augle's seven AI agents debate, verify, and grade evidence in three phases — Exploration, Deliberation, Synthesis — before producing a calibrated finding.",
+    "See how Augle's seven AI agents debate, verify, and grade evidence across three phases before producing a calibrated finding.",
 };
 
 const HERO_LINKS = [

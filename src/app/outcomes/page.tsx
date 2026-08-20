@@ -7,7 +7,7 @@ import { eyebrow, sectionTitle } from "@/lib/styles";
 export const metadata: Metadata = {
   title: "Augle Outcomes | Public Record of AI Deliberation Sessions & Accuracy",
   description:
-    "Every Augle session is published in full — confidence grade, agent scores, Guardian audit trail, and Brier score against market consensus. Browse resolved sessions by domain.",
+    "Every Augle session is published in full — confidence grade, agent scores, Guardian audit trail, and Brier score against market consensus.",
 };
 
 type Grade = "Established" | "Probable" | "Contested" | "Gap";

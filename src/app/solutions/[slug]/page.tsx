@@ -52,7 +52,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const solution = getSolution(slug);
   if (!solution) return {};
-  return { title: solution.metaTitle, description: solution.metaDescription };
+  return { title: solution.metaTitle };
 }
 
 export default async function SolutionPage({

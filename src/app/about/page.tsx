@@ -7,7 +7,7 @@ import { btnPrimary, eyebrow, sectionTitle } from "@/lib/styles";
 export const metadata: Metadata = {
   title: "About Augle | AI-Powered Deliberation & Research Infrastructure",
   description:
-    "Augle builds structured multi-agent AI deliberation infrastructure — seven specialized agents, evidence-anchored findings, and calibrated confidence grades for high-stakes research.",
+    "Augle builds multi-agent AI deliberation infrastructure — seven specialized agents, evidence-anchored findings, and calibrated confidence grades for research.",
 };
 
 const MISSION_VIDEOS = [

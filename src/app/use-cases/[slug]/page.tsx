@@ -18,7 +18,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const useCase = getUseCase(slug);
   if (!useCase) return {};
-  return { title: useCase.metaTitle, description: useCase.metaDescription };
+  return { title: useCase.metaTitle };
 }
 
 const DEPTH_TAG_CLASS: Record<string, string> = {

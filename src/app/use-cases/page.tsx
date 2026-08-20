@@ -7,7 +7,7 @@ import { eyebrow, sectionTitle } from "@/lib/styles";
 export const metadata: Metadata = {
   title: "Use Cases — Augle",
   description:
-    "Browse Augle use cases across eleven solution verticals — thirty-three hypothetical sessions illustrating how multi-agent deliberation serves researchers, analysts, legal teams, investors, and institutional decision-makers.",
+    "Browse Augle use cases across eleven verticals — hypothetical sessions showing how multi-agent deliberation serves researchers, analysts, and decision-makers.",
 };
 
 type PreviewCase = {

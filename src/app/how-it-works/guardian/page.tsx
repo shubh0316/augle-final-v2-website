@@ -7,7 +7,7 @@ import { eyebrow, sectionTitle } from "@/lib/styles";
 export const metadata: Metadata = {
   title: "Guardian: Augle's AI Fact-Checking & Source Verification Layer",
   description:
-    "The Guardian is Augle's independent integrity system — verifying every citation in real time, with halt authority at every phase boundary before a finding can proceed.",
+    "The Guardian is Augle's independent integrity system — verifying every citation in real time, with halt authority at every phase boundary.",
 };
 
 const FACTS = [
